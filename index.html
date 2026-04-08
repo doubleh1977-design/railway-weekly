@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球鐵路週報 | Globe Railway Weekly Intelligence</title>
+<meta name="description" content="每週彙整全球鐵路（高速及亞洲傳統鐵路）最新動態，涵蓋事件事故、營運、智慧維修、票務旅服、AI科技、資安、財務、工程、ESG等11大主題。">
+<meta property="og:title" content="全球鐵路週報 | Globe Railway Weekly Intelligence">
+<meta property="og:description" content="每週彙整全球鐵路最新動態，涵蓋11大主題領域。">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --navy:#0D2B5E;--blue:#1565C0;--lblue:#E3EBF8;--teal:#00838F;
+    --red:#C62828;--gray:#546E7A;--lgray:#ECEFF1;--white:#fff;
+    --black:#212121;--green:#2E7D32;--amber:#F57F17;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif;
+    background:#F0F4F8;color:var(--black);font-size:15px;line-height:1.7}
+
+  /* ── Hero ── */
+  .hero{background:linear-gradient(145deg,#0B2050,#1a3a7a 55%,#0a4a8a);
+    position:relative;overflow:hidden;padding:56px 24px 44px}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;
+    background:linear-gradient(90deg,var(--teal),#00BCD4,#1E88E5,var(--teal))}
+  .hero::after{content:'🚄';position:absolute;right:5%;bottom:-10px;
+    font-size:120px;opacity:.08;transform:scaleX(-1)}
+  .hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative}
+  .hero-logo{font-size:11px;font-weight:700;letter-spacing:4px;color:#90CAF9;
+    text-transform:uppercase;margin-bottom:14px}
+  .hero-title{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;
+    letter-spacing:3px;margin-bottom:6px}
+  .hero-en{font-size:13px;color:#90CAF9;letter-spacing:2px;margin-bottom:20px}
+  .hero-desc{font-size:13px;color:#B3C8E8;max-width:560px;margin:0 auto 28px;line-height:1.9}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .hero-tag{background:rgba(255,255,255,.1);color:#90CAF9;font-size:11px;
+    padding:4px 12px;border-radius:4px;border:1px solid rgba(144,202,249,.3)}
+
+  /* ── Stats bar ── */
+  .stats-bar{background:var(--navy);padding:16px 24px}
+  .stats-inner{max-width:900px;margin:0 auto;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+  .stat{text-align:center;color:#fff}
+  .stat-n{font-size:26px;font-weight:700;color:#4FC3F7}
+  .stat-l{font-size:11px;color:#78909C;margin-top:2px}
+
+  /* ── Main ── */
+  .main{max-width:900px;margin:36px auto;padding:0 20px 60px}
+
+  /* ── Section header ── */
+  .sec-hd{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .sec-hd-line{flex:1;height:1px;background:linear-gradient(to right,#CBD5E0,transparent)}
+  .sec-hd-txt{font-size:13px;font-weight:700;color:var(--navy);letter-spacing:2px;
+    white-space:nowrap;padding:0 4px}
+
+  /* ── Report cards ── */
+  .reports{display:grid;gap:16px}
+  .rcard{background:#fff;border-radius:10px;border:1px solid #DDE4EE;
+    display:flex;gap:0;overflow:hidden;
+    transition:box-shadow .2s,transform .2s}
+  .rcard:hover{box-shadow:0 4px 20px rgba(13,43,94,.12);transform:translateY(-2px)}
+  .rcard-inner{text-decoration:none;color:inherit;display:flex;flex:1;align-items:stretch}
+  .rcard-accent{width:5px;flex-shrink:0;background:linear-gradient(to bottom,var(--teal),var(--blue))}
+  .rcard-date{background:var(--navy);color:#fff;width:90px;flex-shrink:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:16px 8px;gap:4px}
+  .rcard-date-m{font-size:10px;color:#90CAF9;letter-spacing:1px;font-weight:600}
+  .rcard-date-d{font-size:28px;font-weight:700;color:#fff;line-height:1}
+  .rcard-date-y{font-size:10px;color:#78909C}
+  .rcard-body{padding:16px 20px;flex:1;min-width:0}
+  .rcard-week{display:inline-block;background:var(--teal);color:#fff;
+    font-size:10px;font-weight:700;padding:2px 9px;border-radius:3px;margin-bottom:8px}
+  .rcard-title{font-size:14.5px;font-weight:700;color:var(--navy);
+    margin-bottom:5px;line-height:1.4}
+  .rcard-period{font-size:11px;color:var(--gray);margin-bottom:10px}
+  .rcard-tags{display:flex;flex-wrap:wrap;gap:5px}
+  .rcard-tag{font-size:10px;background:var(--lblue);color:var(--blue);
+    padding:2px 8px;border-radius:3px}
+  .rcard-new{font-size:9px;background:var(--red);color:#fff;
+    padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:middle}
+  .rcard-actions{display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:8px;padding:16px;border-left:1px solid var(--lgray)}
+  .btn-html{background:var(--blue);color:#fff;font-size:11px;font-weight:600;
+    padding:6px 14px;border-radius:5px;text-decoration:none;white-space:nowrap;
+    transition:background .15s;display:block;text-align:center}
+  .btn-html:hover{background:#0D47A1}
+  .btn-pdf{background:var(--lgray);color:var(--gray);font-size:11px;
+    padding:6px 14px;border-radius:5px;text-decoration:none;white-space:nowrap;
+    transition:background .15s;display:block;text-align:center}
+  .btn-pdf:hover{background:#CFD8DC;color:var(--navy)}
+
+  /* ── Categories ── */
+  .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:36px}
+  .cat{background:#fff;border-radius:8px;border:1px solid #DDE4EE;
+    padding:16px;display:flex;align-items:center;gap:12px}
+  .cat-icon{font-size:22px;width:36px;text-align:center}
+  .cat-zh{font-size:13px;font-weight:700;color:var(--navy)}
+  .cat-en{font-size:10px;color:var(--gray);margin-top:2px}
+
+  /* ── Subscribe box ── */
+  .subscribe{background:linear-gradient(135deg,var(--navy),#1a3a7a);
+    border-radius:12px;padding:32px 28px;text-align:center;margin-bottom:36px;color:#fff}
+  .subscribe h3{font-size:17px;margin-bottom:8px;font-weight:700}
+  .subscribe p{font-size:12px;color:#90CAF9;margin-bottom:18px;line-height:1.8}
+  .sub-email{display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(144,202,249,.4);
+    border-radius:8px;padding:12px 20px;font-size:13px;color:#CFE2F3;word-break:break-all}
+  .sub-email strong{color:#4FC3F7}
+
+  /* ── Loading / Empty ── */
+  .loading{text-align:center;padding:40px;color:var(--gray);font-size:13px}
+
+  /* ── Footer ── */
+  .footer{text-align:center;padding:28px 0;border-top:1px solid #CBD5E0;
+    font-size:11px;color:#90A4AE}
+
+  /* ── Responsive ── */
+  @media(max-width:600px){
+    .rcard-inner{flex-wrap:wrap}
+    .rcard-date{width:100%;flex-direction:row;padding:10px 16px;gap:10px;
+      justify-content:flex-start}
+    .rcard-date-d{font-size:22px}
+    .rcard-actions{flex-direction:row;border-left:none;border-top:1px solid var(--lgray);
+      justify-content:flex-start}
+    .stats-inner{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Hero ── -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-logo">Globe Railway Intelligence</div>
+    <h1 class="hero-title">全球鐵路週報</h1>
+    <div class="hero-en">Global Railway Weekly Intelligence Report</div>
+    <p class="hero-desc">
+      每週系統性彙整全球鐵路最新動態，涵蓋高速鐵路與亞洲傳統鐵路，<br>
+      11 大核心主題，提供鐵路產業決策者最即時的情報支援。
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">🚄 高速鐵路 HSR</span>
+      <span class="hero-tag">🚂 亞洲傳統鐵路 Asia Rail</span>
+      <span class="hero-tag">🇹🇼 台灣 THSRC/TRA</span>
+      <span class="hero-tag">🇨🇳 中國 China</span>
+      <span class="hero-tag">🇯🇵 日本 Japan</span>
+      <span class="hero-tag">🇰🇷 韓國 Korea</span>
+      <span class="hero-tag">🇮🇳 印度 India</span>
+      <span class="hero-tag">🇹🇭 泰國 Thailand</span>
+      <span class="hero-tag">🇪🇺 歐洲 Europe</span>
+      <span class="hero-tag">🌎 北美 N.America</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Stats bar ── -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-n">11</div>
+      <div class="stat-l">主題類別<br>Coverage Topics</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">6+</div>
+      <div class="stat-l">涵蓋國家地區<br>Regions Covered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n" id="stat-total">—</div>
+      <div class="stat-l">累計期數<br>Total Issues</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">週一</div>
+      <div class="stat-l">每週更新<br>Updated Every Monday</div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ── Coverage Categories ── -->
+  <div class="sec-hd">
+    <div class="sec-hd-txt">📋 十一大涵蓋主題 / Coverage Topics</div>
+    <div class="sec-hd-line"></div>
+  </div>
+  <div class="cats">
+    <div class="cat"><div class="cat-icon">🚨</div><div><div class="cat-zh">事件事故</div><div class="cat-en">Incidents &amp; Accidents</div></div></div>
+    <div class="cat"><div class="cat-icon">⚙️</div><div><div class="cat-zh">營運與維修</div><div class="cat-en">Operations &amp; Maintenance</div></div></div>
+    <div class="cat"><div class="cat-icon">🔧</div><div><div class="cat-zh">智慧維修</div><div class="cat-en">Smart Maintenance</div></div></div>
+    <div class="cat"><div class="cat-icon">🎫</div><div><div class="cat-zh">票務與旅服</div><div class="cat-en">Ticketing &amp; Services</div></div></div>
+    <div class="cat"><div class="cat-icon">📱</div><div><div class="cat-zh">智慧車上旅服</div><div class="cat-en">Smart On-board Services</div></div></div>
+    <div class="cat"><div class="cat-icon">🏛️</div><div><div class="cat-zh">智慧車站旅服</div><div class="cat-en">Smart Station Services</div></div></div>
+    <div class="cat"><div class="cat-icon">🤖</div><div><div class="cat-zh">AI 與科技應用</div><div class="cat-en">AI &amp; Technology Applications</div></div></div>
+    <div class="cat"><div class="cat-icon">🔒</div><div><div class="cat-zh">資安強化</div><div class="cat-en">Cybersecurity</div></div></div>
+    <div class="cat"><div class="cat-icon">💰</div><div><div class="cat-zh">財務狀況</div><div class="cat-en">Financial Status</div></div></div>
+    <div class="cat"><div class="cat-icon">🏗️</div><div><div class="cat-zh">工程進度</div><div class="cat-en">Engineering Progress</div></div></div>
+    <div class="cat"><div class="cat-icon">🌱</div><div><div class="cat-zh">ESG 永續發展</div><div class="cat-en">ESG &amp; Sustainability</div></div></div>
+  </div>
+
+  <!-- ── Reports Archive ── -->
+  <div class="sec-hd">
+    <div class="sec-hd-txt">📁 歷史報告彙整 / Reports Archive</div>
+    <div class="sec-hd-line"></div>
+  </div>
+
+  <div class="reports" id="reports-container">
+    <div class="loading">⏳ 載入中… Loading reports…</div>
+  </div>
+
+  <!-- ── Subscribe ── -->
+  <br><br>
+  <div class="subscribe">
+    <h3>📬 關於本週報 / About This Report</h3>
+    <p>
+      本週報每週一自動彙整全球鐵路最新動態<br>
+      This report is automatically compiled every Monday
+    </p>
+  </div>
+
+</div>
+
+<!-- ── Footer ── -->
+<div class="footer">
+  <p>© 2026 Globe HSR Weekly Intelligence ｜ 全球高速鐵路情報週報</p>
+  <p style="margin-top:6px">
+    資料來源：公開新聞媒體、各鐵路公司官方公告 ｜
+    Sources: Public news media &amp; official railway announcements
+  </p>
+  <p style="margin-top:6px" id="last-updated"></p>
+</div>
+
+<script>
+// Load reports from manifest.json
+(async () => {
+  const container = document.getElementById('reports-container');
+  const statTotal = document.getElementById('stat-total');
+  const lastUpdated = document.getElementById('last-updated');
+
+  try {
+    // Add cache-busting for GitHub Pages
+    const res = await fetch('manifest.json?v=' + Date.now());
+    if (!res.ok) throw new Error('manifest not found');
+    const data = await res.json();
+
+    const reports = data.reports || [];
+    statTotal.textContent = reports.length;
+    if (data.last_updated) {
+      lastUpdated.textContent = '最後更新：' + data.last_updated + ' | Last updated: ' + data.last_updated;
+    }
+
+    if (reports.length === 0) {
+      container.innerHTML = '<div class="loading">尚無報告 No reports yet.</div>';
+      return;
+    }
+
+    container.innerHTML = reports.map((r, i) => {
+      const isLatest = i === 0;
+      const tags = (r.topics || []).map(t =>
+        `<span class="rcard-tag">${t}</span>`
+      ).join('');
+
+      return `
+      <div class="rcard">
+        <a class="rcard-inner" href="${r.html}">
+          <div class="rcard-accent"></div>
+          <div class="rcard-date">
+            <div class="rcard-date-m">${r.month}</div>
+            <div class="rcard-date-d">${r.day}</div>
+            <div class="rcard-date-y">${r.year}</div>
+          </div>
+          <div class="rcard-body">
+            <div>
+              <span class="rcard-week">${r.week}</span>
+              ${isLatest ? '<span class="rcard-new">LATEST</span>' : ''}
+            </div>
+            <div class="rcard-title">全球高速鐵路週報 第${r.week.replace('W','')}週｜Global HSR Weekly Report</div>
+            <div class="rcard-period">涵蓋期間：${r.period}</div>
+            <div class="rcard-tags">${tags}</div>
+          </div>
+        </a>
+        <div class="rcard-actions">
+          <a class="btn-html" href="${r.html}" target="_blank">閱讀網頁版</a>
+          ${r.pdf ? `<a class="btn-pdf" href="${r.pdf}" target="_blank">下載 PDF</a>` : ''}
+        </div>
+      </div>`;
+    }).join('') + `
+    <div style="background:#fff;border-radius:10px;border:2px dashed #CBD5E0;
+      padding:28px;text-align:center;color:#90A4AE">
+      <div style="font-size:28px;margin-bottom:10px">📅</div>
+      <div style="font-size:13px;font-weight:600;color:#546E7A;margin-bottom:6px">
+        每週一自動新增最新報告
+      </div>
+      <div style="font-size:11px">New reports are automatically added every Monday morning</div>
+    </div>`;
+
+  } catch (e) {
+    // Fallback: show static entry if manifest fails (e.g. local file:// mode)
+    container.innerHTML = `
+    <div class="rcard">
+      <a class="rcard-inner" href="HSR_Weekly_Report_2026-04-06.html">
+        <div class="rcard-accent"></div>
+        <div class="rcard-date">
+          <div class="rcard-date-m">APR</div>
+          <div class="rcard-date-d">06</div>
+          <div class="rcard-date-y">2026</div>
+        </div>
+        <div class="rcard-body">
+          <div><span class="rcard-week">W14</span><span class="rcard-new">LATEST</span></div>
+          <div class="rcard-title">全球高速鐵路週報 第14週｜Global HSR Weekly Report</div>
+          <div class="rcard-period">涵蓋期間：2026年3月30日 – 4月5日</div>
+          <div class="rcard-tags">
+            <span class="rcard-tag">⚙️ 營運</span>
+            <span class="rcard-tag">🤖 AI科技</span>
+            <span class="rcard-tag">🏗️ 工程</span>
+            <span class="rcard-tag">🌱 ESG</span>
+          </div>
+        </div>
+      </a>
+      <div class="rcard-actions">
+        <a class="btn-html" href="HSR_Weekly_Report_2026-04-06.html" target="_blank">閱讀網頁版</a>
+        <a class="btn-pdf" href="HSR_Weekly_Report_2026-04-06.pdf" target="_blank">下載 PDF</a>
+      </div>
+    </div>`;
+    statTotal.textContent = '1';
+  }
+})();
+</script>
+</body>
+</html>
