@@ -1,0 +1,19 @@
+{
+  "reports": [
+    {
+      "week": "W14",
+      "year": 2026,
+      "date": "2026-04-06",
+      "period": "2026-03-30 至 2026-04-05",
+      "period_en": "Mar 30 – Apr 5, 2026",
+      "month": "APR",
+      "day": "06",
+      "html": "HSR_Weekly_Report_2026-04-06.html",
+      "pdf": "HSR_Weekly_Report_2026-04-06.pdf",
+      "topics": ["🚨 事件事故", "⚙️ 營運維修", "🔧 智慧維修", "🎫 票務旅服", "📱 智慧車上", "🏛️ 智慧車站", "🤖 AI科技", "🔒 資安", "💰 財務", "🏗️ 工程", "🌱 ESG"],
+      "is_latest": true
+    }
+  ],
+  "last_updated": "2026-04-06",
+  "total_reports": 1
+}

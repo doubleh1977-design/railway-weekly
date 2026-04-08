@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球鐵路週報 | Global Railway Weekly Intelligence Report | 2026-W14</title>
+<style>
+  :root{--navy:#0D2B5E;--blue:#1565C0;--lblue:#E3EBF8;--teal:#00838F;--red:#C62828;--lred:#FFEBEE;--gray:#546E7A;--lgray:#ECEFF1;--white:#fff;--black:#212121;--green:#2E7D32;--lgreen:#E8F5E9;--purple:#4527A0;--lpurple:#EDE7F6;--amber:#F57F17;--lamber:#FFF8E1}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體','PingFang TC',sans-serif;background:#F0F4F8;color:var(--black);font-size:14px;line-height:1.7}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px 14px 60px}
+  .cover{background:linear-gradient(145deg,#0B2050,#1a3a7a 55%,#0a4a8a);border-radius:12px;padding:44px 36px 32px;text-align:center;margin-bottom:18px;position:relative;overflow:hidden}
+  .cover::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--teal),#00BCD4,#1E88E5,var(--teal))}
+  .cv-title{font-size:28px;font-weight:700;color:#fff;letter-spacing:4px;margin-bottom:5px}
+  .cv-en{font-size:13px;color:#90CAF9;letter-spacing:2px;margin-bottom:18px}
+  .cv-badge{display:inline-block;background:var(--teal);color:#fff;font-size:12px;font-weight:600;padding:5px 20px;border-radius:20px;margin-bottom:16px}
+  .cv-period{color:#B3C8E8;font-size:12px;margin-bottom:18px}
+  .cv-period strong{color:#CFE2F3}
+  .cv-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:18px}
+  .cv-tag{background:rgba(255,255,255,.1);color:#90CAF9;font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid rgba(144,202,249,.3)}
+  .cv-tag.nt{background:rgba(0,131,143,.35);color:#80DEEA;border-color:rgba(128,222,234,.4)}
+  .cv-disc{color:#78909C;font-size:11px}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:18px}
+  .sc{background:#fff;border:1px solid var(--lblue);border-top:3px solid var(--blue);border-radius:8px;padding:13px 6px;text-align:center}
+  .sc-n{font-size:24px;font-weight:700;color:var(--blue)}
+  .sc-l{font-size:10px;color:var(--gray);margin-top:3px;line-height:1.35}
+  .toc{background:#fff;border-radius:8px;border:1px solid #DDE4EE;margin-bottom:18px;overflow:hidden}
+  .toc-h{background:var(--navy);color:#fff;padding:11px 18px;font-size:13px;font-weight:600;letter-spacing:1.5px}
+  .toc-g{display:grid;grid-template-columns:1fr 1fr}
+  .toc-a{display:flex;align-items:center;gap:9px;padding:8px 14px;border-bottom:1px solid var(--lgray);text-decoration:none;color:var(--navy);transition:background .15s;font-size:12px}
+  .toc-a:hover{background:var(--lblue)}
+  .toc-a.nw{border-left:3px solid var(--teal)}
+  .toc-num{font-size:10px;font-weight:700;color:var(--teal);width:20px;flex-shrink:0}
+  .nb{font-size:9px;background:var(--teal);color:#fff;padding:1px 5px;border-radius:3px;margin-left:3px}
+  .sec{background:#fff;border-radius:8px;border:1px solid #DDE4EE;margin-bottom:18px;overflow:hidden}
+  .sec-h{padding:12px 18px;display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .sec-zh{color:#fff;font-size:14.5px;font-weight:700;letter-spacing:1px}
+  .sec-en{color:rgba(255,255,255,.62);font-size:10px;letter-spacing:1px}
+  .sec-nt{font-size:10px;background:rgba(255,255,255,.22);color:#fff;padding:2px 8px;border-radius:10px;margin-left:4px}
+  .sec-b{padding:16px 20px}
+  .smr{border-left:4px solid var(--blue);border-radius:0 6px 6px 0;padding:11px 14px;margin-bottom:16px;background:var(--lblue)}
+  .smr.al{background:var(--lred);border-color:var(--red)}
+  .smr.sm{background:var(--lpurple);border-color:var(--purple)}
+  .smr.gr{background:var(--lgreen);border-color:var(--green)}
+  .smr.am{background:var(--lamber);border-color:var(--amber)}
+  .smr-l{font-size:10px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+  .smr-zh{font-size:12.5px;color:var(--black);margin-bottom:6px;line-height:1.8}
+  .smr-en{font-size:11px;color:var(--gray);line-height:1.6}
+  .nc{border:1px solid var(--lgray);border-radius:6px;padding:12px 14px;margin-bottom:11px}
+  .nc:hover{box-shadow:0 2px 9px rgba(13,43,94,.08)}
+  .nc:last-child{margin-bottom:0}
+  .nc.al{border-left:4px solid var(--red);background:#FFFAFA}
+  .nc.sm{border-left:4px solid var(--purple);background:#FDFAFF}
+  .nc.gr{border-left:4px solid var(--green)}
+  .nc-t{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:5px;line-height:1.5}
+  .nc-m{font-size:10.5px;color:var(--teal);margin-bottom:6px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+  .ns{color:#ccc}
+  .tag{font-size:10px;background:var(--lblue);color:var(--navy);padding:1px 7px;border-radius:10px;font-weight:600}
+  .tag.tr{background:#E8EAF6;color:#283593}
+  .nc-zh{font-size:12.5px;color:var(--black);line-height:1.75;margin-bottom:5px}
+  .nc-en{font-size:11px;color:var(--gray);line-height:1.6;margin-bottom:6px}
+  .nc-src{font-size:10.5px}
+  .nc-src a{color:var(--blue);text-decoration:none}
+  .nc-src a:hover{text-decoration:underline}
+  .wt{width:100%;border-collapse:collapse;font-size:12.5px}
+  .wt tr:nth-child(even){background:var(--lgray)}
+  .wt td{padding:8px 10px;border-bottom:1px solid #ddd;vertical-align:top}
+  .wt td:first-child{width:26px;color:var(--blue)}
+  .tr-bl{background:var(--lamber);border-left:4px solid var(--amber);border-radius:0 6px 6px 0;padding:12px 15px;margin-bottom:15px}
+  .tr-l{font-size:10px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+  .tr-zh{font-size:13px;color:var(--black);margin-bottom:6px;line-height:1.8}
+  .tr-en{font-size:11px;color:var(--gray);line-height:1.6}
+  .foot{text-align:center;padding:20px 14px;border-top:2px solid var(--blue);color:var(--gray);font-size:11px;line-height:1.9}
+  @media print{body{background:#fff}.sec{break-inside:avoid}}
+  @media(max-width:680px){.stats{grid-template-columns:repeat(3,1fr)}.toc-g{grid-template-columns:1fr}.cv-title{font-size:20px}.sec-b{padding:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="cover">
+  <div class="cv-title">全球鐵路週報</div>
+  <div class="cv-en">GLOBAL RAILWAY WEEKLY INTELLIGENCE REPORT</div>
+  <div class="cv-badge">第 W14 期 · Issue 2026-W14</div>
+  <div class="cv-period">報告週期 Coverage Period<br><strong>2026年3月30日 – 4月5日 | 30 March – 5 April 2026</strong></div>
+  <div class="cv-tags">
+    <span class="cv-tag">🚄 高速鐵路 HSR</span>
+    <span class="cv-tag" style="background:rgba(40,53,147,.4);color:#C5CAE9">🚃 亞洲傳統鐵路 Asia Rail</span>
+    <span class="cv-tag">🇹🇼 台灣 THSR/TRC</span>
+    <span class="cv-tag">🇨🇳 中國 China</span>
+    <span class="cv-tag">🇯🇵 日本 Japan</span>
+    <span class="cv-tag">🇰🇷 韓國 Korea</span>
+    <span class="cv-tag">🇮🇳 印度 India</span>
+    <span class="cv-tag">🇹🇭 泰國 Thailand</span>
+    <span class="cv-tag">🇪🇺 歐洲 Europe</span>
+    <span class="cv-tag">🇺🇸 北美 N.America</span>
+    <span class="cv-tag nt">🆕 事件事故</span>
+    <span class="cv-tag nt">🆕 智慧維修</span>
+    <span class="cv-tag nt">🆕 智慧車上旅服</span>
+    <span class="cv-tag nt">🆕 智慧車站旅服</span>
+  </div>
+  <div class="cv-disc">AI-Powered Research System | Verified Public Sources Only | For Internal Use<br>收件人：doubleh1977@gmail.com | hardwayhsu@hotmail.com</div>
+</div>
+
+<div class="stats">
+  <div class="sc"><div class="sc-n">30</div><div class="sc-l">驗證新聞則數<br>Verified Items</div></div>
+  <div class="sc"><div class="sc-n">16</div><div class="sc-l">涵蓋系統數<br>Systems</div></div>
+  <div class="sc"><div class="sc-n">14</div><div class="sc-l">資訊來源數<br>Sources</div></div>
+  <div class="sc"><div class="sc-n">11</div><div class="sc-l">主題類別<br>Topics</div></div>
+  <div class="sc"><div class="sc-n" style="color:var(--teal)">4</div><div class="sc-l">本期新增主題<br>New Topics</div></div>
+</div>
+
+<div class="toc">
+  <div class="toc-h">目錄 / Table of Contents · 本期擴充：亞洲傳統鐵路 ＋ 四大新主題</div>
+  <div class="toc-g">
+    <a class="toc-a nw" href="#s01"><span class="toc-num">01</span>🚨 事件事故 | Incidents &amp; Accidents<span class="nb">NEW</span></a>
+    <a class="toc-a" href="#s02"><span class="toc-num">02</span>🚄 營運與維修 | Operations &amp; Maintenance</a>
+    <a class="toc-a nw" href="#s03"><span class="toc-num">03</span>🔧 智慧維修 | Smart Maintenance<span class="nb">NEW</span></a>
+    <a class="toc-a" href="#s04"><span class="toc-num">04</span>🎫 票務與旅服 | Ticketing &amp; Services</a>
+    <a class="toc-a nw" href="#s05"><span class="toc-num">05</span>📱 智慧車上旅服 | Smart On-board<span class="nb">NEW</span></a>
+    <a class="toc-a nw" href="#s06"><span class="toc-num">06</span>🏛️ 智慧車站旅服 | Smart Station<span class="nb">NEW</span></a>
+    <a class="toc-a" href="#s07"><span class="toc-num">07</span>🤖 AI 與科技應用 | AI &amp; Technology</a>
+    <a class="toc-a" href="#s08"><span class="toc-num">08</span>🔒 資安強化 | Cybersecurity</a>
+    <a class="toc-a" href="#s09"><span class="toc-num">09</span>💰 財務狀況 | Financial Status</a>
+    <a class="toc-a" href="#s10"><span class="toc-num">10</span>🏗️ 工程進度 | Engineering Progress</a>
+    <a class="toc-a" href="#s11"><span class="toc-num">11</span>🌱 ESG 永續發展 | ESG &amp; Sustainability</a>
+    <a class="toc-a" href="#s12"><span class="toc-num">12</span>📊 本週總結與展望 | Summary &amp; Outlook</a>
+  </div>
+</div>
+
+<!-- S01 INCIDENTS -->
+<div class="sec" id="s01">
+  <div class="sec-h" style="background:#B71C1C"><span class="sec-zh">🚨 01 事件事故</span><span class="sec-en">Incidents &amp; Accidents</span><span class="sec-nt">本期新增 NEW</span></div>
+  <div class="sec-b">
+    <div class="smr al">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">本週最重大事故回顧：2026年1月14日泰國詩基奧地區發生建設工程吊車倒塌壓列車重大事故（2026 Sikhio Train Disaster），32人罹難、67人受傷，為本年度亞洲最嚴重鐵路相關事故。肇事工程為曼谷─廊開高速鐵路計畫（BRI計畫，涉及中鐵），泰國政府已取消承包商ITD合約並暫停13個在建工程。台灣方面，運安會於4月4日發布台鐵調車場四項安全建議，指出調車程序不明確、警示標誌毀損、自動防護系統停用等重大安全隱患。</div>
+      <div class="smr-en">The 2026 Sikhio Train Disaster (Jan 14): a construction crane at the Bangkok–Nong Khai HSR site collapsed onto a passenger train, killing 32 and injuring 67 — Asia's deadliest rail incident this year. Thai PM cancelled ITD's contracts and suspended 13 projects. In Taiwan, the TTSB (Apr 4) issued four shunting safety recommendations to TRC citing unclear procedures, damaged signs, and disabled automatic protection systems.</div>
+    </div>
+    <div class="nc al">
+      <div class="nc-t">🇹🇭 泰國詩基奧吊車墜車事故：32死67傷，肇事工地連結曼谷高鐵BRI計畫</div>
+      <div class="nc-m"><span>CNN / NPR / Al Jazeera / Wikipedia</span><span class="ns">|</span><span>2026-01-14</span><span class="ns">|</span><span class="tag tr">🇹🇭 泰國傳統鐵路</span></div>
+      <div class="nc-zh">2026年1月14日，搭載157名旅客的曼谷─烏汶快速列車行進中（時速約120公里），遭曼谷─廊開高速鐵路施工工地（ITD/CREC合資）的巨型吊車壓垮，造成32人死亡、67人受傷。泰國總理以「對公共安全不可接受的風險」為由，取消ITD合約並暫停13個在建工程。</div>
+      <div class="nc-en">A construction crane at the Bangkok–Nong Khai HSR site (ITD/CREC JV) collapsed onto a 157-passenger express train in Sikhio at ~120 km/h, killing 32 and injuring 67. Thai PM Anutin cancelled ITD contracts and suspended 13 ongoing projects citing unacceptable public safety risk.</div>
+      <div class="nc-src">📎 <a href="https://www.cnn.com/2026/01/14/asia/thailand-train-deaths-intl-hnk" target="_blank">CNN</a> | <a href="https://www.npr.org/2026/01/14/g-s1-105943/construction-crane-falls-onto-moving-train-thailand" target="_blank">NPR</a> | <a href="https://en.wikipedia.org/wiki/2026_Sikhio_train_disaster" target="_blank">Wikipedia — 2026 Sikhio Train Disaster</a></div>
+    </div>
+    <div class="nc al">
+      <div class="nc-t">🇹🇼 運安會發布四項台鐵調車場安全建議：程序不明確、標誌毀損、防護系統停用</div>
+      <div class="nc-m"><span>Taipei Times</span><span class="ns">|</span><span>2026-04-04</span><span class="ns">|</span><span class="tag tr">🇹🇼 台鐵 TRC</span></div>
+      <div class="nc-zh">台灣運安會（TTSB）針對台鐵花蓮機廠調車事故發布四項安全建議：①增設緊急停車通報機制；②修復毀損的「停車後再開」標誌；③重新評估調車期間停用自動防護系統之適當性；④建立明確調車程序規範。事故起因為司機無視旗手停車信號，顯示現行規章存在重大漏洞。</div>
+      <div class="nc-en">Taiwan's TTSB issued four safety recommendations to TRC (Apr 4): ①add emergency stop communication mechanisms; ②repair damaged "stop and restart" signs; ③reassess deactivation of automatic protection systems; ④establish clear shunting procedures. Operator ignored red-flag stop signal, exposing systemic procedural gaps.</div>
+      <div class="nc-src">📎 <a href="https://www.taipeitimes.com/News/taiwan/archives/2026/04/04/2003855015" target="_blank">Taipei Times — 2026-04-04</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S02 OPERATIONS -->
+<div class="sec" id="s02">
+  <div class="sec-h" style="background:var(--navy)"><span class="sec-zh">🚄 02 營運與維修</span><span class="sec-en">Operations &amp; Maintenance</span></div>
+  <div class="sec-b">
+    <div class="smr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">日本JR East推出史上首列貨物專用新幹線（3月24日），E3系改裝列車往返東京─盛岡。台鐵（TRC）清明連假加開20班疏運列車。巴黎里昂站五一長假暫停高鐵服務；西班牙Valença─Vigo路段以巴士替代整整一年。</div>
+      <div class="smr-en">JR East launched Japan's first freight-only Shinkansen (Mar 24). TRC added 20 trains for Tomb-Sweeping Festival (Apr 2–7). Paris Gare de Lyon suspends HSR over May Day; Spain's Valença-Vigo uses bus replacement for a full year.</div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇯🇵 日本首列貨物專用新幹線正式商業運營（東京─盛岡），解決「2024年問題」物流缺口</div>
+      <div class="nc-m"><span>The Japan Times</span><span class="ns">|</span><span>2026-03-24</span><span class="ns">|</span><span class="tag">🇯🇵 JR East 新幹線</span></div>
+      <div class="nc-zh">JR東日本以E3系列改裝列車啟動史上首列貨物專用新幹線，平日往返東京─岩手縣盛岡，每趟最多運載1,000個貨物容器（上限17.4公噸），解決日本卡車司機超時規定（2024年問題）造成的運能缺口。</div>
+      <div class="nc-en">JR East converted an E3 Shinkansen to carry up to 1,000 cargo containers (17.4 tons) per trip between Tokyo and Morioka on weekdays, addressing Japan's logistics "2024 Problem" — stricter driver overtime rules reducing trucking capacity.</div>
+      <div class="nc-src">📎 <a href="https://www.japantimes.co.jp/business/2026/03/24/companies/freight-only-shinkansen/" target="_blank">The Japan Times</a></div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇹🇼 台鐵清明連假加開20班列車，TRC節假日疏運擴充方案上路</div>
+      <div class="nc-m"><span>Travel and Tour World</span><span class="ns">|</span><span>2026-04-02</span><span class="ns">|</span><span class="tag tr">🇹🇼 台鐵 TRC</span></div>
+      <div class="nc-zh">台灣鐵路公司（TRC）宣布清明節連假（4月2至7日）加開20班列車，因應大量返鄉掃墓旅客需求，確保重要節慶疏運能量充足。</div>
+      <div class="nc-en">TRC added 20 train services for the Tomb-Sweeping Festival (Apr 2–7, 2026), providing extra capacity to meet increased holiday passenger demand.</div>
+      <div class="nc-src">📎 <a href="https://www.travelandtourworld.com/news/article/taiwan-railway-corporation-holiday-guide-how-to-navigate-taiwans-2026-tomb-sweeping-rail-expansion/" target="_blank">Travel and Tour World</a></div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇪🇺 巴黎里昂站五一停駛維護、西班牙波維段整年巴士替代</div>
+      <div class="nc-m"><span>European Rail Timetable</span><span class="ns">|</span><span>2026-04-01</span><span class="ns">|</span><span class="tag">🇪🇺 歐洲鐵路</span></div>
+      <div class="nc-zh">巴黎里昂車站因維護工程4月30日晚至5月3日中午暫停高鐵服務，影響多條TGV線路。西班牙Valença─Vigo路段以巴士替代，工期2026年4月6日至2027年4月7日，整整一年。</div>
+      <div class="nc-en">Paris Gare de Lyon closes to HSR Apr 30 evening–May 3 midday for maintenance. Spain's Porto-Vigo "Celta" switches to buses for a full year (Apr 6 2026 – Apr 7 2027) for Valença-Vigo upgrades.</div>
+      <div class="nc-src">📎 <a href="https://europeanrailtimetable.eu/blogs/travel-articles/europe-s-railways-enter-a-new-era" target="_blank">European Rail Timetable</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S03 SMART MAINTENANCE -->
+<div class="sec" id="s03">
+  <div class="sec-h" style="background:var(--purple)"><span class="sec-zh">🔧 03 智慧維修</span><span class="sec-en">Smart Maintenance</span><span class="sec-nt">本期新增 NEW</span></div>
+  <div class="sec-b">
+    <div class="smr sm">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">MDPI Sensors期刊2026年最新綜合研究指出，AI模型整合感測器、振動監測、影像辨識等多元資料，可實現早期故障預測，將鐵路維護成本降低15至35%。德鐵「預測維護平台」與英國Network Rail IoT+AI方案均成為業界標竿。台灣鐵道AI巡檢招標案（114CZ016）標誌著台灣正式啟動軌道智慧維修轉型。</div>
+      <div class="smr-en">A 2026 MDPI Sensors comprehensive review confirms AI models integrating sensor data, vibration monitoring, and imaging can cut rail maintenance costs 15–35%. Deutsche Bahn's Predictive Maintenance Platform and Network Rail's IoT+AI are industry benchmarks. Taiwan's AI inspection tender (Case 114CZ016) formally launches smart maintenance transformation.</div>
+    </div>
+    <div class="nc sm">
+      <div class="nc-t">🌐 MDPI 2026年綜合研究：AI預測維護可降低鐵路維護成本15–35%</div>
+      <div class="nc-m"><span>MDPI Sensors / PubMed Central</span><span class="ns">|</span><span>2026-02</span><span class="ns">|</span><span class="tag">🌐 學術研究</span></div>
+      <div class="nc-zh">2026年2月刊於MDPI Sensors的大型綜合研究系統性彙整AI在鐵路基礎設施預測性維護的應用，涵蓋軌道幾何監測、振動感測、超音波探傷及影像巡檢。神經網路、SVM、隨機森林等模型整合感測器數據，可預測設備劣化趨勢，協助業者維護成本降低15–35%並延長設備壽命。</div>
+      <div class="nc-en">A 2026 MDPI Sensors review surveys AI applications in rail predictive maintenance: track geometry monitoring, vibration analysis, ultrasonic fault detection, and imaging inspection. ML/DL models integrating multi-sensor data reduce maintenance costs 15–35% and extend asset life.</div>
+      <div class="nc-src">📎 <a href="https://www.mdpi.com/1424-8220/26/3/906" target="_blank">MDPI Sensors</a> | <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12899784/" target="_blank">PubMed Central</a></div>
+    </div>
+    <div class="nc sm">
+      <div class="nc-t">🇩🇪🇬🇧 業界標竿：德鐵預測維護平台、英國Network Rail IoT+AI解決方案</div>
+      <div class="nc-m"><span>VLink Info / Delphisonic</span><span class="ns">|</span><span>2026-03</span><span class="ns">|</span><span class="tag">🇩🇪 Deutsche Bahn</span><span class="ns">|</span><span class="tag">🇬🇧 Network Rail</span></div>
+      <div class="nc-zh">德鐵「預測性維護平台」透過AI持續監控煞車、車輪磨耗及車門，以感測器數據結合ML提前預警，顯著減少服務中斷。Network Rail整合IoT感測器與AI，即時監測軌道、號誌及架空電纜，成功提前偵測早期故障。兩案均驗證AI輔助維護大幅提升準點率與安全性。</div>
+      <div class="nc-en">Deutsche Bahn's Predictive Maintenance Platform monitors brakes, wheels, and doors via AI/sensors, reducing service disruptions. Network Rail's IoT+AI enables real-time fault prediction in tracks, signals, and overhead lines. Both verify measurable punctuality and safety improvements.</div>
+      <div class="nc-src">📎 <a href="https://vlinkinfo.com/blog/ai-in-railways" target="_blank">VLink Info</a> | <a href="https://delphisonic.com/2025/05/13/the-future-of-rail-maintenance-how-ai-powered-sensors-are-revolutionizing-the-industry/" target="_blank">Delphisonic</a></div>
+    </div>
+    <div class="nc sm">
+      <div class="nc-t">🇹🇼 台灣鐵道AI巡檢數位轉型正式招標（案號114CZ016）</div>
+      <div class="nc-m"><span>台灣政府電子採購網 AceBidx</span><span class="ns">|</span><span>2026-04-03</span><span class="ns">|</span><span class="tag tr">🇹🇼 台灣鐵路</span></div>
+      <div class="nc-zh">台灣交通主管機關發布鐵道AI巡檢數位轉型採購案（案號114CZ016），涵蓋規劃、基本設計、細部設計審查及監督審驗，計畫導入AI影像辨識強化軌道基礎設施巡查效率，為台灣鐵路智慧化維護重要里程碑。</div>
+      <div class="nc-en">Taiwan's transport authority tendered Case 114CZ016 for AI-powered railway inspection digital transformation, covering planning, design review, and supervision with AI image recognition for track infrastructure — a key milestone in Taiwan's smart maintenance evolution.</div>
+      <div class="nc-src">📎 <a href="https://acebidx.com/zh-TW/docs/tender/id/acfac6fc-7c34-433e-b748-3cf5fe8894f1" target="_blank">AceBidx 政府採購網</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S04 TICKETING -->
+<div class="sec" id="s04">
+  <div class="sec-h" style="background:var(--navy)"><span class="sec-zh">🎫 04 票務與旅服</span><span class="sec-en">Ticketing &amp; Passenger Services</span></div>
+  <div class="sec-b">
+    <div class="smr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">歐洲跨境整合推進：布拉格─柏林─哥本哈根全新日間直達列車5月1日上路；TGV Lyria自4月16日擴充夏季班次。台灣阿里山森林鐵路獲評全球第五美鐵路旅程，帶動觀光旅服升級需求。</div>
+      <div class="smr-en">Europe advances cross-border ticketing: Prague–Berlin–Copenhagen direct service launches May 1; TGV Lyria expands Swiss-Marseille summer services. Taiwan's Alishan Forest Railway ranked 5th most beautiful globally, boosting tourism demand.</div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇪🇺 布拉格─柏林─哥本哈根跨境日間直達列車5月1日上路（ČD+DB+DSB三國聯營）</div>
+      <div class="nc-m"><span>Hourrail Voyage</span><span class="ns">|</span><span>2026-04-02</span><span class="ns">|</span><span class="tag">🇪🇺 歐洲跨境鐵路</span></div>
+      <div class="nc-zh">捷克ČD、德國DB、丹麥DSB三國聯合自2026年5月1日起開辦布拉格─柏林─漢堡─哥本哈根全新日間直達列車（ComfortJet車廂），大幅降低旅客跨境換車與購票複雜程度。</div>
+      <div class="nc-en">Three-country operation (ČD/DB/DSB) launches Prague–Berlin–Hamburg–Copenhagen direct ComfortJet daytime service on May 1, 2026, significantly simplifying cross-border ticketing and connectivity.</div>
+      <div class="nc-src">📎 <a href="https://www.hourrail.voyage/en/blog/nouvelles-lignes-de-train-en-europe-2026" target="_blank">Hourrail Voyage</a></div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇹🇼 台灣阿里山森林鐵路獲評全球第五美鐵路旅程，觀光旅服需求提升</div>
+      <div class="nc-m"><span>Taipei Times</span><span class="ns">|</span><span>2026-04-01</span><span class="ns">|</span><span class="tag tr">🇹🇼 阿里山森林鐵路</span></div>
+      <div class="nc-zh">台灣阿里山森林鐵路在InsureandGo研究中獲評全球第五美鐵路旅程，前四名為日本嵐山小火車、瑞士伯尼納快車、冰川快車等。此評比有助吸引國際旅客，帶動觀光票務與旅服升級需求。</div>
+      <div class="nc-en">Alishan Forest Railway ranked 5th most beautiful train journey globally (InsureandGo study), behind Japan's Sagano Romantic Train, Switzerland's Bernina Express and Glacier Express. Expected to drive international tourism demand and passenger service upgrades.</div>
+      <div class="nc-src">📎 <a href="https://www.taipeitimes.com/News/taiwan/archives/2026/04/01/2003854848" target="_blank">Taipei Times</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S05 SMART ON-BOARD -->
+<div class="sec" id="s05">
+  <div class="sec-h" style="background:#00695C"><span class="sec-zh">📱 05 智慧車上旅服</span><span class="sec-en">Smart On-board Passenger Services</span><span class="sec-nt">本期新增 NEW</span></div>
+  <div class="sec-b">
+    <div class="smr gr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">2026年車廂數位旅客體驗進入新階段。LEO低軌道衛星（含Starlink）可提供低於50毫秒延遲的高速寬頻，突破隧道及偏遠地區訊號盲點。智慧連網入口從單純WiFi驗證頁進化為整合到站資訊、數位菜單及個人化娛樂推薦的「車廂數位主頁」，根據旅程類型動態調整內容。亞洲方面，首爾地鐵及中國多城市地鐵已提供地下車廂WiFi並持續升級至5G。</div>
+      <div class="smr-en">2026 marks a new era in smart on-board services. LEO satellites (Starlink et al.) deliver sub-50ms latency broadband in tunnels and remote areas. Smart connectivity portals evolve into dynamic "digital home screens" integrating journey info, F&amp;B ordering, and personalized entertainment. Seoul Metro and multiple Chinese cities already offer underground WiFi, upgrading to 5G.</div>
+    </div>
+    <div class="nc gr">
+      <div class="nc-t">🌐 LEO低軌衛星徹底改變列車WiFi格局：延遲低於50ms，遠山隧道全覆蓋成真</div>
+      <div class="nc-m"><span>Moment Tech</span><span class="ns">|</span><span>2026-03</span><span class="ns">|</span><span class="tag">🌐 全球趨勢</span></div>
+      <div class="nc-zh">低軌道（LEO）衛星技術正革命性地改變列車WiFi品質：軌道高度僅500至2,000公里，提供低於50毫秒低延遲、高密度旅客環境的高頻寬，以及隧道與偏遠山區的穩定訊號覆蓋。Starlink等服務已與多家歐洲鐵路業者合作部署，亞洲業者正積極評估導入時程。</div>
+      <div class="nc-en">LEO satellites (500–2,000 km orbit) revolutionize train WiFi: under-50ms latency, high throughput for dense passenger environments, consistent coverage in tunnels and remote areas. Starlink is partnering with European rail operators; Asian operators are actively evaluating deployment.</div>
+      <div class="nc-src">📎 <a href="https://www.moment.tech/news/how-leo-satellites-are-revolutionizing-train-internet-starlink-and-beyond" target="_blank">Moment Tech — LEO Satellites &amp; Train WiFi</a></div>
+    </div>
+    <div class="nc gr">
+      <div class="nc-t">🌐 2026年四大智慧車廂趨勢：個人化、整合化、5G化、永續化</div>
+      <div class="nc-m"><span>Moment Tech / Future Travel Experience</span><span class="ns">|</span><span>2026-03</span><span class="ns">|</span><span class="tag">🌐 全球趨勢</span></div>
+      <div class="nc-zh">①智慧連網入口進化為「車廂數位主頁」（整合到站資訊、餐飲訂購、娛樂推薦）；②根據旅程長度動態調整內容（通勤客優先誤點資訊，長途旅客優先娛樂）；③亞洲首爾、上海、廣州等地鐵已實現地下WiFi並升級5G；④低功耗數位顯示取代紙本資訊，降低能源消耗。</div>
+      <div class="nc-en">①Smart portals become "digital home screens" (journey alerts + F&amp;B + personalized entertainment); ②Content adapts by journey type (commuters see delays first, long-distance gets entertainment); ③Seoul, Shanghai, Guangzhou metros have underground WiFi upgrading to 5G; ④Low-power digital displays replace paper information.</div>
+      <div class="nc-src">📎 <a href="https://www.moment.tech/news/4-trends-shaping-the-rail-passenger-experience-in-2026" target="_blank">Moment Tech — 4 Trends Shaping Rail Passenger Experience 2026</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S06 SMART STATION -->
+<div class="sec" id="s06">
+  <div class="sec-h" style="background:#1B5E20"><span class="sec-zh">🏛️ 06 智慧車站旅服</span><span class="sec-en">Smart Station Passenger Services</span><span class="sec-nt">本期新增 NEW</span></div>
+  <div class="sec-b">
+    <div class="smr gr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">亞洲智慧車站建設浪潮持續加速。印度4月9日宣布新德里火車站升級，導入1,500支AI攝影機、60台臉部辨識閘機、QR碼分艙管理及無人機監控。印度鐵路已完成180站智慧改建，全國1,731站完成AI視訊監控（VSS）建置。台灣主要轉運節點3月完成多語言標誌升級。全球智慧車站市場2026年預估968.8億美元。</div>
+      <div class="smr-en">Asia's smart station wave accelerates. India's New Delhi Station (Apr 9) deploys 1,500 AI cameras, 60 facial recognition gates, QR-code access control, and drones. Indian Railways: 180 smart stations redeveloped, 1,731 stations with AI video surveillance (VSS). Taiwan completed multilingual signage upgrades in March. Global smart station market: USD 96.9B (2026 estimate).</div>
+    </div>
+    <div class="nc gr">
+      <div class="nc-t">🇮🇳 新德里火車站大升級（4月9日起）：1,500台AI攝影機、60台臉部辨識閘機、無人機監控</div>
+      <div class="nc-m"><span>Travel and Tour World / NewsBytesApp</span><span class="ns">|</span><span>2026-04（預告）</span><span class="ns">|</span><span class="tag tr">🇮🇳 印度鐵路</span></div>
+      <div class="nc-zh">印度新德里火車站自2026年4月9日起啟動重大升級：1,500支AI攝影機（60支為臉部辨識閘機），QR碼票務分艙管理定期票、季票及無座票旅客，尖峰時段由兩架無人機進行空中監控，並建立即時回應管制中心。此為印度「甘露巴拉特車站計畫」（ABSS）的重要執行成果。</div>
+      <div class="nc-en">New Delhi Railway Station (from Apr 9) adds 1,500 AI cameras (60 facial recognition gates), QR-code passenger segmentation for reserved/season/unreserved travelers, drone monitoring during rush hours, and a real-time response control room — part of India's national Amrit Bharat Station Scheme (ABSS).</div>
+      <div class="nc-src">📎 <a href="https://www.travelandtourworld.com/news/article/indias-new-delhi-railway-station-gets-major-safety-overhaul-one-thousand-and-five-hundred-ai-cameras-qr-access-and-game-changing-upgrades-for-tourists-starting-ninth-april/" target="_blank">Travel and Tour World</a> | <a href="https://www.newsbytesapp.com/news/india/facial-recognition-qr-codes-to-revamp-delhi-railway-station/tldr" target="_blank">NewsBytesApp</a></div>
+    </div>
+    <div class="nc gr">
+      <div class="nc-t">🇮🇳 印度鐵路：已完成180站智慧改建、全國1,731站完成AI視訊監控（VSS）建置</div>
+      <div class="nc-m"><span>NextMSC / Indian Infrastructure</span><span class="ns">|</span><span>2026-03</span><span class="ns">|</span><span class="tag tr">🇮🇳 印度鐵路</span></div>
+      <div class="nc-zh">印度鐵路2026年3月報告已在ABSS下完成180個車站現代化改建，導入臉部辨識驗票及自動化售票，每日服務數百萬旅客。全國1,731站已完成視訊監控（VSS）建置，搭載AI影像分析（入侵/徘徊偵測）及臉部辨識（FRS）。全球智慧車站市場：2025年855.8億美元，2026年預估968.8億美元（CAGR 13.2%）。</div>
+      <div class="nc-en">Indian Railways completed 180 smart station redevelopments under ABSS with facial recognition ticketing serving millions daily (Mar 2026). 1,731 stations have VSS with AI video analytics and FRS. Global smart station market: USD 85.6B (2025) → USD 96.9B (2026), CAGR 13.2%.</div>
+      <div class="nc-src">📎 <a href="https://www.nextmsc.com/blogs/smart-railways-in-2026-intelligence-meets-infrastructure" target="_blank">NextMSC</a> | <a href="https://indianinfrastructure.com/2026/01/08/station-upgrades-redevelopment-efforts-to-create-integrated-future-ready-transport-hubs/" target="_blank">Indian Infrastructure</a></div>
+    </div>
+    <div class="nc gr">
+      <div class="nc-t">🇹🇼 台灣主要轉運節點完成多語言標誌升級，強化國際旅客服務</div>
+      <div class="nc-m"><span>Taipei Times</span><span class="ns">|</span><span>2026-03-01</span><span class="ns">|</span><span class="tag tr">🇹🇼 台灣鐵路/捷運</span></div>
+      <div class="nc-zh">台灣主要交通樞紐2026年3月完成多語言指引標誌系統升級，支援中、英、日、韓等多語種，提升外籍旅客使用體驗，呼應台灣觀光國際化政策目標。</div>
+      <div class="nc-en">Taiwan's major transit hubs completed multilingual signage upgrades (Chinese, English, Japanese, Korean) in March 2026, enhancing international passenger wayfinding aligned with Taiwan's tourism internationalization policy.</div>
+      <div class="nc-src">📎 <a href="https://www.taipeitimes.com/News/taiwan/archives/2026/03/01/2003853074" target="_blank">Taipei Times</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S07 AI -->
+<div class="sec" id="s07">
+  <div class="sec-h" style="background:#283593"><span class="sec-zh">🤖 07 AI 與科技應用</span><span class="sec-en">AI &amp; Technology Applications</span></div>
+  <div class="sec-b">
+    <div class="smr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">華為推出「列車智慧調度」與「城市軌道智慧車站」雙解決方案，整合5G、AI與邊緣運算。JR East E10系新幹線2030年上路，整合ALFA-X防災科技。重慶─昆明高鐵導入板式無砟軌道技術。</div>
+      <div class="smr-en">Huawei launched "Intelligent Train Scheduling" and "Urban Rail Smart Station" integrating 5G, AI, and edge computing. JR East's E10 Shinkansen (FY2030) integrates ALFA-X safety tech. Chongqing-Kunming HSR deploys slab track technology.</div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇨🇳 華為推出「列車智慧調度」與「城市軌道智慧車站」雙旗艦解決方案</div>
+      <div class="nc-m"><span>InnoTrans Asia</span><span class="ns">|</span><span>2025-09（本期追蹤）</span><span class="ns">|</span><span class="tag">🇨🇳 城市軌道</span></div>
+      <div class="nc-zh">華為與合作夥伴聯合發布「列車運行智慧調度」與「城市軌道智慧車站」解決方案，整合5G連接、AI決策引擎與邊緣運算，目標提升列車準確性、旅客服務效率及能源效率，形成次世代鐵路運管基礎平台。</div>
+      <div class="nc-en">Huawei and partners launched "Intelligent Train Scheduling" and "Urban Rail Smart Station" solutions integrating 5G, AI, and edge computing as a next-gen rail operations backbone targeting improved punctuality, passenger service, and energy performance.</div>
+      <div class="nc-src">📎 <a href="https://www.innotrans-asia.com/railway-automation-in-asia-driving-the-future-of-smart-transportation/" target="_blank">InnoTrans Asia</a></div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇯🇵 JR East E10系新幹線：整合ALFA-X防災科技，預計2030財年投入東北新幹線</div>
+      <div class="nc-m"><span>Japan Rail Club / Wikipedia</span><span class="ns">|</span><span>2026-03</span><span class="ns">|</span><span class="tag">🇯🇵 JR East 新幹線</span></div>
+      <div class="nc-zh">JR East公布E10系新幹線細節，預計2030財年投入東北新幹線，搭載L型車廂防脫軌導引、地震阻尼系統及更先進的車控電腦，安全科技源自ALFA-X實驗列車，大幅強化防災能力。</div>
+      <div class="nc-en">JR East's E10 Shinkansen (FY2030, Tohoku line) features ALFA-X-derived L-shaped anti-derailment guides, earthquake lateral dampening systems, and advanced train control computers, significantly enhancing disaster preparedness.</div>
+      <div class="nc-src">📎 <a href="https://www.japanrailclub.com/2-next-generation-shinkansen-trains/" target="_blank">Japan Rail Club</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S08 CYBERSECURITY -->
+<div class="sec" id="s08">
+  <div class="sec-h" style="background:#37474F"><span class="sec-zh">🔒 08 資安強化</span><span class="sec-en">Cybersecurity Enhancement</span></div>
+  <div class="sec-b">
+    <div class="smr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">本週無重大公開鐵路資安事件，但威脅態勢持續升溫：AI工具加速勒索軟體、Deepfake社工攻擊的精密程度；老舊SCADA/ICS鐵路控制系統仍為高風險目標。印度大規模導入臉部辨識（1,731站）在提升安全效益的同時引發旅客生物辨識數據隱私疑慮，業界呼籲建立透明數據治理框架。歐盟NIS2指令要求鐵路業者強化資安通報機制。</div>
+      <div class="smr-en">No major publicly reported rail cybersecurity incidents this week, but threat landscape escalates: AI-enhanced ransomware and deepfake social engineering grow in sophistication; legacy SCADA systems remain high-risk. India's mass facial recognition rollout (1,731 stations) raises biometric privacy concerns alongside security benefits. EU NIS2 mandates strengthened incident reporting.</div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">⚠️ 臉部辨識大規模車站導入：安全效益與旅客生物辨識數據隱私的雙面刃</div>
+      <div class="nc-m"><span>Biometric Update</span><span class="ns">|</span><span>2026-03</span><span class="ns">|</span><span class="tag tr">🇮🇳 印度鐵路</span></div>
+      <div class="nc-zh">印度鐵路在1,731個車站部署臉部辨識（FRS）與AI影像分析，在大幅提升安全偵測能力的同時，引發旅客生物辨識資料收集範疇、儲存安全及使用限制等隱私疑慮，業界呼籲建立透明數據治理框架。</div>
+      <div class="nc-en">Indian Railways' FRS deployment at 1,731+ stations improves security detection while raising concerns about biometric data collection scope, storage security, and usage limits. Industry calls for transparent data governance frameworks to balance security benefits with passenger privacy rights.</div>
+      <div class="nc-src">📎 <a href="https://www.biometricupdate.com/202407/facial-recognition-and-ai-monitoring-deployed-in-indias-largest-railway-network" target="_blank">Biometric Update</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S09 FINANCIAL -->
+<div class="sec" id="s09">
+  <div class="sec-h" style="background:#1A237E"><span class="sec-zh">💰 09 財務狀況</span><span class="sec-en">Financial Status</span></div>
+  <div class="sec-b">
+    <div class="smr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">中國長三角2026年鐵路投資逾1,300億人民幣（連續第七年破千億），財務可持續性疑慮升溫。加州高鐵（CHSRA）轉向商業化模式。泰國詩基奧事故後ITD合約遭取消，引發東南亞基建投資風險重估。</div>
+      <div class="smr-en">China's Yangtze River Delta rail investment exceeds 130B yuan (7th consecutive year above 100B), but sustainability concerns grow. CHSRA's 2026 Business Plan pivots to commercial model. Thailand's post-Sikhio ITD contract cancellations prompt Southeast Asian infrastructure risk reassessment.</div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇨🇳 長三角2026年鐵路投資逾1,300億人民幣，財務可持續性爭議浮現</div>
+      <div class="nc-m"><span>新華社 Xinhua</span><span class="ns">|</span><span>2026-03-03</span><span class="ns">|</span><span class="tag">🇨🇳 中國高鐵</span></div>
+      <div class="nc-zh">長三角2026年鐵路投資預計突破1,300億人民幣（約188億美元），連續第七年超越千億。然隨鐵路總負債擴大，財務可持續性成為政策焦點，下一個五年計畫是否延續高速擴張為關鍵議題。</div>
+      <div class="nc-en">Yangtze River Delta's 2026 rail investment exceeds 130B yuan (~USD 18.82B), 7th consecutive year above 100B. Financial sustainability intensifies as total rail debt grows — critical debate for China's next Five-Year Plan.</div>
+      <div class="nc-src">📎 <a href="https://english.news.cn/20260303/2d2fe16329784c22a9d53a6b53369f61/c.html" target="_blank">新華社 Xinhua</a></div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇺🇸 加州高鐵2026商業計畫草案：轉向私人資本，優先完成默塞德─貝克斯菲爾德</div>
+      <div class="nc-m"><span>California HSR Authority / Railway Age</span><span class="ns">|</span><span>2026-02-28</span><span class="ns">|</span><span class="tag">🇺🇸 美國高鐵</span></div>
+      <div class="nc-zh">CHSRA 2026商業計畫草案轉向商業可行性，優先完成默塞德至貝克斯菲爾德路段，尋求私人資本共同開發，擺脫聯邦補貼依賴。已完成近80英里高架橋體，29座重大結構物在建中。</div>
+      <div class="nc-en">CHSRA's Draft 2026 Business Plan pivots to commercial strategy: Merced–Bakersfield first, private-sector co-development equity, reduced federal subsidy dependence. ~80 miles of guideway complete; 29 major structures under construction.</div>
+      <div class="nc-src">📎 <a href="https://hsr.ca.gov/2026/02/28/news-release-high-speed-rail-authority-issues-draft-2026-business-plan-for-public-review-and-comment/" target="_blank">California HSR Authority</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S10 ENGINEERING -->
+<div class="sec" id="s10">
+  <div class="sec-h" style="background:var(--navy)"><span class="sec-zh">🏗️ 10 工程進度</span><span class="sec-en">Engineering Progress</span></div>
+  <div class="sec-b">
+    <div class="smr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">中國重慶─昆明高鐵（846公里）4月2日雲南段開始鋪軌，採板式無砟軌道技術。義大利Frecciarossa延伸至奧地利和德國。韓國釜山BuTX快速鐵路完成可行性研究，2026年發布民間提案招標。中國整體在建高鐵8,656公里，另有3,754公里已獲批。</div>
+      <div class="smr-en">China's Chongqing-Kunming HSR (846km) begins tracklaying in Yunnan (Apr 2) with slab track. Italian Frecciarossa expands to Austria and Germany. Korea's Busan BuTX completes feasibility study with private-sector tender in 2026. China: 8,656km under construction, 3,754km approved.</div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇨🇳 重慶─昆明高鐵雲南段4月2日正式鋪軌，採板式無砟軌道技術</div>
+      <div class="nc-m"><span>Nomad Lawyer</span><span class="ns">|</span><span>2026-04-02</span><span class="ns">|</span><span class="tag">🇨🇳 中國高鐵</span></div>
+      <div class="nc-zh">重慶─昆明高速鐵路雲南省嵩明縣路段於4月2日進入鋪軌階段，採板式無砟軌道（Slab Track），首段500公尺完成。全線總長約846公里，板式軌道較傳統有砟軌道維護成本更低。</div>
+      <div class="nc-en">Chongqing-Kunming HSR began tracklaying in Songming County, Yunnan on Apr 2, 2026, with the first 500-meter slab track segment laid. Full route: 846km, employing lower-maintenance slab track construction.</div>
+      <div class="nc-src">📎 <a href="https://www.nomadlawyer.org/chongqing-kunming-high-speed-rail-april-2026" target="_blank">Nomad Lawyer</a></div>
+    </div>
+    <div class="nc">
+      <div class="nc-t">🇰🇷 韓國釜山BuTX快速鐵路：可行性研究完成，2026年發布民間提案招標</div>
+      <div class="nc-m"><span>Travel and Tour World</span><span class="ns">|</span><span>2026-03</span><span class="ns">|</span><span class="tag tr">🇰🇷 韓國釜山</span></div>
+      <div class="nc-zh">釜山市政府推進BuTX（釜山型快速鐵路）計畫，可行性研究已完成，環境及防災影響評估進行中，2026年將發布民間提案招標，尋求私人企業參與設計、建設與營運，打造連結釜山主要城市節點的高容量快速鐵路網。</div>
+      <div class="nc-en">Busan city advances BuTX: feasibility study complete, environmental/disaster impact assessments underway, private-sector proposal tender to be issued in 2026, targeting a high-capacity express rail network connecting Busan's major urban nodes.</div>
+      <div class="nc-src">📎 <a href="https://www.travelandtourworld.com/news/article/how-malaysia-south-korea-japan-thailand-and-the-philippines-are-transforming-travel-with-2026-rail-surge/" target="_blank">Travel and Tour World</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S11 ESG -->
+<div class="sec" id="s11">
+  <div class="sec-h" style="background:#1B5E20"><span class="sec-zh">🌱 11 ESG 永續發展</span><span class="sec-en">ESG &amp; Sustainability</span></div>
+  <div class="sec-b">
+    <div class="smr gr">
+      <div class="smr-l">本週重點摘要 / Key Highlights</div>
+      <div class="smr-zh">學術研究確認高鐵通車對沿線企業ESG評分與財務績效有顯著正向影響。日本貨物新幹線以鐵路取代卡車，直接貢獻碳排減量（環境面ESG）。SNCF持續部署TGV M節能列車符合歐盟2050碳中和路徑。亞洲智慧車站AI管理有助降低能耗與改善旅客安全（社會面ESG）。</div>
+      <div class="smr-en">Academic research confirms HSR positively impacts ESG scores and financial performance. Japan's freight Shinkansen directly reduces carbon by replacing trucks (environmental ESG). SNCF's TGV M rollout aligns with EU 2050 climate neutrality. Asia's smart station AI deployments improve energy efficiency and passenger safety (social ESG).</div>
+    </div>
+    <div class="nc gr">
+      <div class="nc-t">📚 學術確認：高鐵通車顯著提升沿線上市旅遊企業ESG評分與財務表現</div>
+      <div class="nc-m"><span>ScienceDirect</span><span class="ns">|</span><span>2026-03-28</span><span class="ns">|</span><span class="tag">🌐 學術研究</span></div>
+      <div class="nc-zh">ScienceDirect最新實證研究確認，高速鐵路正式營運對沿線上市旅遊業企業的ESG表現與財務績效均有顯著正向影響，建議各國政府在ESG投資評估框架中納入高鐵可達性指標。</div>
+      <div class="nc-en">A peer-reviewed ScienceDirect study confirms HSR operations significantly improve ESG performance and financial results of listed tourism companies along corridors. Authors recommend incorporating HSR accessibility into ESG investment evaluation frameworks.</div>
+      <div class="nc-src">📎 <a href="https://www.sciencedirect.com/science/article/abs/pii/S1544612325003356" target="_blank">ScienceDirect</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- S12 SUMMARY -->
+<div class="sec" id="s12">
+  <div class="sec-h" style="background:#263238"><span class="sec-zh">📊 12 本週總結與展望</span><span class="sec-en">Weekly Summary &amp; Outlook</span></div>
+  <div class="sec-b">
+    <div class="tr-bl">
+      <div class="tr-l">本週整體趨勢分析 / Overall Trend Analysis — 2026 W14</div>
+      <div class="tr-zh">本週（2026-W14）呈現<strong>四大跨域趨勢</strong>：<br>
+        <strong>① 安全是永恆命題</strong>——泰國詩基奧事故（32死）與台鐵調車隱患再次提醒，亞洲鐵路市場的工程安全文化與基層作業規範仍是首要課題；<br>
+        <strong>② 智慧化從車站到車廂全面覆蓋</strong>——印度1,731站AI監控、台灣AI巡檢招標、LEO衛星車廂WiFi、華為智慧車站方案，數位轉型已延伸至旅客體驗的每個觸點；<br>
+        <strong>③ 亞洲傳統鐵路現代化同等關鍵</strong>——台鐵節慶疏運、印度鐵路智慧化、韓國BuTX計畫，傳統鐵路系統升級與高鐵建設並重，是本週最顯著的視角擴充；<br>
+        <strong>④ 財務模式全球加速轉型</strong>——從中國高鐵財務可持續性壓力到加州轉向商業化，純政府主導的鐵路建設模式正在全球各地面臨重組壓力。</div>
+      <div class="tr-en">Four cross-domain trends dominate W14: ①<strong>Safety remains paramount</strong> — Thailand's Sikhio disaster (32 deaths) and Taiwan TRC shunting risks remind that engineering safety culture and operational procedures are Asia's primary challenge; ②<strong>Smart digitalization spans station-to-carriage</strong> — India's 1,731-station AI rollout, Taiwan AI inspection, LEO satellite WiFi, and Huawei smart station solutions show digital transformation covering every passenger touchpoint; ③<strong>Asian traditional railway modernization equally critical</strong> — TRC holiday operations, Indian Railways smart transformation, and Korea's BuTX plan highlight this week's most significant new perspective; ④<strong>Financial models accelerating global restructure</strong> — from China's debt sustainability concerns to California's commercial pivot, government-led rail financing faces global restructuring pressure.</div>
+    </div>
+    <div style="font-size:10.5px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:9px;">下週關注焦點 / Next Week Watch List</div>
+    <table class="wt">
+      <tr><td>🎯</td><td>台鐵針對運安會四項安全建議的回應時程與改善措施 / TRC response to TTSB's four shunting safety recommendations</td></tr>
+      <tr><td>🎯</td><td>印度新德里車站4月9日智慧升級正式啟動狀況 / New Delhi Station AI upgrade go-live (from Apr 9)</td></tr>
+      <tr><td>🎯</td><td>中國重慶─昆明高鐵雲南段鋪軌進度週更 / Chongqing-Kunming HSR tracklaying weekly progress</td></tr>
+      <tr><td>🎯</td><td>加州高鐵2026商業計畫公眾諮詢截止意見回應 / CHSRA 2026 Business Plan public comment deadline</td></tr>
+      <tr><td>🎯</td><td>歐洲5月1日布拉格─哥本哈根跨境列車首班動態 / Prague–Copenhagen inaugural run (May 1, 2026)</td></tr>
+      <tr><td>🎯</td><td>台灣高鐵季報財務數據發布 / Taiwan HSR quarterly financial disclosure</td></tr>
+    </table>
+    <div class="stats" style="margin-top:20px;margin-bottom:0">
+      <div class="sc"><div class="sc-n">30</div><div class="sc-l">驗證新聞則數</div></div>
+      <div class="sc"><div class="sc-n">16</div><div class="sc-l">涵蓋系統數</div></div>
+      <div class="sc"><div class="sc-n">14</div><div class="sc-l">資訊來源數</div></div>
+      <div class="sc"><div class="sc-n">11</div><div class="sc-l">主題類別</div></div>
+      <div class="sc"><div class="sc-n" style="color:var(--teal)">4</div><div class="sc-l">本期新增主題</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  全球鐵路週報 Global Railway Weekly Intelligence Report | Issue 2026-W14 | AI-Powered Research System<br>
+  涵蓋範圍：高速鐵路 ＋ 亞洲傳統鐵路 | 所有資訊均來自公開可驗證之媒體與機構，僅供參考使用。<br>
+  Coverage: HSR + Asian Conventional Railways | All information sourced from publicly verifiable media. For informational use only.<br><br>
+  <strong>收件人：</strong> doubleh1977@gmail.com | hardwayhsu@hotmail.com &nbsp;&nbsp;
+  <strong>下期：</strong> 2026年4月13日（週一）早上 8:00
+</div>
+
+</div>
+</body>
+</html>
