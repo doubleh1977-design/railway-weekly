@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球鐵路週報 W19 | Global Railway Weekly Intelligence Report 2026-05-04</title>
+<style>
+  :root {
+    --primary: #1a3a5c;
+    --secondary: #2e6da4;
+    --accent: #e8a020;
+    --accent2: #c0392b;
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #2c3e50;
+    --muted: #7f8c8d;
+    --border: #dce3ea;
+    --green: #27ae60;
+    --teal: #16a085;
+    --purple: #8e44ad;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', 'PingFang TC', 'Noto Sans TC', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; background: var(--card); }
+  .report-header {
+    background: linear-gradient(135deg, #0d2137 0%, #1a3a5c 50%, #2e6da4 100%);
+    color: white;
+    padding: 40px 30px 30px;
+    text-align: center;
+  }
+  .report-header .logo-line {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #90b8d8;
+    margin-bottom: 14px;
+  }
+  .report-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .report-header .subtitle {
+    font-size: 14px;
+    color: #b8d4ec;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+  }
+  .week-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #1a1a1a;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 18px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .period-info {
+    font-size: 13px;
+    color: #aecde8;
+    margin-bottom: 20px;
+  }
+  .tags {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-top: 10px;
+  }
+  .tag {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #d0e8f7;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+  }
+  .stats-bar {
+    background: var(--card);
+    border-bottom: 3px solid var(--accent);
+    padding: 22px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+  }
+  .stat-item .num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+  }
+  .stat-item .label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .toc {
+    background: #f0f4f8;
+    padding: 22px 30px;
+    border-bottom: 1px solid var(--border);
+  }
+  .toc h2 {
+    font-size: 16px; color: var(--primary); margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+  .toc ul { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 24px; }
+  .toc a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    padding: 4px 0;
+    border-bottom: 1px dashed transparent;
+  }
+  .toc a:hover {
+    color: var(--accent2);
+    border-bottom-color: var(--accent2);
+  }
+
+  section.topic {
+    padding: 28px 30px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  section.topic h2 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+  }
+  section.topic h2 .en { font-size: 13px; color: var(--muted); display: block; font-weight: 400; margin-top: 4px; }
+
+  .news-card {
+    background: #fafbfc;
+    border-left: 4px solid var(--secondary);
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    border-radius: 0 6px 6px 0;
+  }
+  .news-card.alert { border-left-color: var(--accent2); background: #fff7f5; }
+  .news-card.good  { border-left-color: var(--green);   background: #f4faf6; }
+  .news-card.tech  { border-left-color: var(--purple);  background: #faf6fc; }
+  .news-card.fin   { border-left-color: var(--teal);    background: #f3fbfa; }
+  .news-card.eng   { border-left-color: var(--accent);  background: #fff8ec; }
+
+  .news-card h3 {
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .news-card .meta {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .news-card p { font-size: 14px; line-height: 1.7; margin-bottom: 6px; }
+  .news-card .source {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .news-card .source a {
+    color: var(--secondary);
+    text-decoration: none;
+    border-bottom: 1px dotted;
+  }
+
+  .quiet-box {
+    background: linear-gradient(135deg, #f9f9f9 0%, #eef2f6 100%);
+    border: 1px dashed #b8c4d0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+  .quiet-box .quiet-title {
+    font-size: 14px;
+    color: #6b7c8c;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .quiet-box p {
+    font-size: 13px;
+    color: #5a6b7c;
+    margin: 0;
+  }
+
+  .summary-section {
+    background: linear-gradient(135deg, #1a3a5c 0%, #2e6da4 100%);
+    color: white;
+    padding: 30px;
+  }
+  .summary-section h2 {
+    color: white;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 19px;
+  }
+  .summary-section h3 {
+    color: var(--accent);
+    font-size: 14px;
+    margin: 18px 0 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .summary-section p { color: #e0eaf3; margin-bottom: 8px; font-size: 14px; }
+  .summary-section ul { padding-left: 22px; margin-bottom: 10px; }
+  .summary-section li { color: #e0eaf3; margin-bottom: 4px; font-size: 14px; }
+
+  .footer {
+    text-align: center;
+    padding: 22px;
+    background: #0d2137;
+    color: #a0bbd6;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 700px) {
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .toc ul { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="report-header">
+  <div class="logo-line">Global Railway Intelligence • 全球鐵路情報</div>
+  <h1>全球鐵路週報</h1>
+  <div class="subtitle">Global Railway Weekly Intelligence Report</div>
+  <div class="week-badge">WEEK 19 · 2026 · 週一定版</div>
+  <div class="period-info">涵蓋期間 / Coverage Period：2026年4月27日 – 5月3日 (Apr 27 – May 3, 2026)<br>發布日期 / Published：2026-05-04 (Monday)</div>
+  <div class="tags">
+    <span class="tag">高速鐵路 HSR</span>
+    <span class="tag">亞洲傳統鐵路 Asia Rail</span>
+    <span class="tag">台灣 THSR/TRC</span>
+    <span class="tag">中國 China</span>
+    <span class="tag">日本 Japan</span>
+    <span class="tag">韓國 Korea</span>
+    <span class="tag">印度 India</span>
+    <span class="tag">泰國 Thailand</span>
+    <span class="tag">歐洲 Europe</span>
+    <span class="tag">北美 North America</span>
+  </div>
+</header>
+
+<div class="stats-bar">
+  <div class="stat-item"><span class="num">24</span><span class="label">驗證新聞則數</span></div>
+  <div class="stat-item"><span class="num">15+</span><span class="label">涵蓋鐵路系統</span></div>
+  <div class="stat-item"><span class="num">20+</span><span class="label">資訊來源</span></div>
+  <div class="stat-item"><span class="num">11</span><span class="label">主題類別</span></div>
+</div>
+
+<nav class="toc">
+  <h2>📑 目錄 Table of Contents</h2>
+  <ul>
+    <li><a href="#t01">01. 🚨 事件事故 Incidents & Accidents</a></li>
+    <li><a href="#t02">02. ⚙️ 營運與維修 Operations & Maintenance</a></li>
+    <li><a href="#t03">03. 🔧 智慧維修 Smart Maintenance</a></li>
+    <li><a href="#t04">04. 🎫 票務與旅服 Ticketing & Passenger Services</a></li>
+    <li><a href="#t05">05. 📱 智慧車上旅服 Smart On-board Services</a></li>
+    <li><a href="#t06">06. 🏛️ 智慧車站旅服 Smart Station Services</a></li>
+    <li><a href="#t07">07. 🤖 AI與科技應用 AI & Technology</a></li>
+    <li><a href="#t08">08. 🔒 資安強化 Cybersecurity</a></li>
+    <li><a href="#t09">09. 💰 財務狀況 Financial Status</a></li>
+    <li><a href="#t10">10. 🏗️ 工程進度 Engineering Progress</a></li>
+    <li><a href="#t11">11. 🌱 ESG永續發展 ESG & Sustainability</a></li>
+    <li><a href="#summary">12. 📊 本週總結與展望 Summary & Outlook</a></li>
+  </ul>
+</nav>
+
+<!-- ========== 01 ========== -->
+<section class="topic" id="t01">
+  <h2>01. 🚨 事件事故 Incidents & Accidents
+    <span class="en">Recent rail safety events affecting global services</span>
+  </h2>
+
+  <div class="news-card alert">
+    <h3>印尼 Bekasi 通勤列車與長程列車追撞 — 16 死、90 傷</h3>
+    <div class="meta">INDONESIA · KAI · Bekasi Timur Station · 2026-04-27</div>
+    <p>4月27日，西爪哇 Bekasi Timur 站內，一列 KRL Commuterline 通勤列車遭 Argo Bromo Anggrek 長程特急追撞，造成至少 16 人死亡、90 人受傷。事故初步調查指向進站訊號與調度作業疏失，KAI 已暫停涉事車次並啟動內部與獨立調查。</p>
+    <p class="source">Sources: <a href="https://en.wikipedia.org/wiki/List_of_rail_accidents_(2020%E2%80%93present)" target="_blank">List of rail accidents (2020–present)</a></p>
+  </div>
+
+  <div class="news-card alert">
+    <h3>瑞典 Arlanda Express 機場快線脫軌 — 2 人輕傷</h3>
+    <div class="meta">SWEDEN · Arlanda Express · 2026-04-27</div>
+    <p>4月27日，斯德哥爾摩 Arlanda 機場快線於機場附近區段發生脫軌，造成 2 名旅客輕傷，所幸無人員死亡。Arlanda Express 公司表示已立即停駛涉事路段並改以接駁巴士疏運機場旅客，事故原因尚待瑞典運輸事故調查局釐清。</p>
+    <p class="source">Sources: <a href="https://en.wikipedia.org/wiki/List_of_rail_accidents_(2020%E2%80%93present)" target="_blank">List of rail accidents (2020–present)</a></p>
+  </div>
+
+  <div class="news-card">
+    <h3>西班牙 Adamuz 高鐵脫軌事故後續 — Madrid–Sevilla 軸線恢復後客流回升</h3>
+    <div class="meta">SPAIN · ADIF · Renfe · 2026-04 月底</div>
+    <p>2026 年 1 月 18 日 Adamuz 重大事故 (46 死、292 傷) 造成的 Madrid–Sevilla 高速軸線中斷影響仍在追蹤。Renfe 與 ADIF 本週公布五一連假期間客流量已回到事故前水準，但用戶投訴關注事故調查公開時程；Civil Guard 的初步報告認定軌道斷裂與焊接組件不當、軌道圈警報門檻設定保守等多重原因相關。</p>
+    <p class="source">Sources: <a href="https://en.wikipedia.org/wiki/2026_Adamuz_rail_disaster" target="_blank">2026 Adamuz rail disaster</a></p>
+  </div>
+</section>
+
+<!-- ========== 02 ========== -->
+<section class="topic" id="t02">
+  <h2>02. ⚙️ 營運與維修 Operations & Maintenance
+    <span class="en">Service operations, maintenance windows, and timetable updates</span>
+  </h2>
+
+  <div class="news-card good">
+    <h3>中國鐵路五一加開列車 — 日均 12,000+ 班、單日載客創 24.8 百萬人歷史新高</h3>
+    <div class="meta">CHINA · China Railway · 2026-04-29 ~ 05-06</div>
+    <p>中國國鐵集團針對五一連假 (旅運期 4/29–5/6) 啟動高峰運行圖，日均開行旅客列車約 13,000 班，包含夜間高鐵和加班車。5 月 1 日當日全國鐵路發送旅客 2,480 萬人次，較 2025 年同日多 170 萬，創歷史單日新紀錄；連假 8 日累計鐵路發送旅客 1.58 億人次。12306 平台依即時訂票數據動態調整運能配置，整體旅運運作平穩。</p>
+    <p class="source">Sources: <a href="https://www.channelstv.com/2026/05/02/china-railway-handles-record-24-8-million-passengers-on-may-day/" target="_blank">Channels TV – China Railway 24.8M Passengers</a> · <a href="https://www.chinadailyasia.com/hk/article/632014" target="_blank">China Daily Asia – Rail expanded for May Day</a></p>
+  </div>
+
+  <div class="news-card good">
+    <h3>香港高鐵金週加開 26 對列車 — 含北京臥鋪 G897/898</h3>
+    <div class="meta">HONG KONG · MTR · West Kowloon · 2026-04-30 ~ 05-03</div>
+    <p>港鐵與運輸署為配合內地五一黃金週與「一檢」客流，於 4/30 至 5/3 廣深港高鐵每日加開 26 對列車，並引入跨夜的 G897/898 北京臥鋪服務以滿足長途過夜需求。同時東鐵綫加密班次以紓緩跨境通勤壓力。</p>
+    <p class="source">Sources: <a href="https://www.visahq.com/news/2026-04-29/hk/extra-high-speed-rail-and-east-rail-services-to-relieve-golden-week-crowding-transport-department-says/" target="_blank">Extra HSR Golden Week services</a></p>
+  </div>
+
+  <div class="news-card">
+    <h3>加州高鐵 Tulare 工地物料運輸 — 4/20 至 5/8 持續、4/29 董事會通過 2026 商業計畫</h3>
+    <div class="meta">USA · California HSR · 2026-04-29</div>
+    <p>BuildHSR 公告 Tulare 縣 SR 43 區段大型物料運輸延伸至 5 月 8 日。California 高鐵局 4/29 董事會通過 2026 年商業計畫，將營運起點 (IOS Central Valley) 推遲至 2032 年，總成本估列由 1,260 億美元上調至 2,310 億美元；另公告 Q2 將授予 Track & Systems 主合約，目標年底前啟動軌道鋪設。</p>
+    <p class="source">Sources: <a href="https://buildhsr.com/" target="_blank">BuildHSR</a> · <a href="https://www.foxla.com/news/california-high-speed-rail-cost-soars-231-billion" target="_blank">California HSR Cost $231B</a></p>
+  </div>
+
+  <div class="news-card">
+    <h3>JR 東日本 Hokkaido–Sanriku 餘震警報 — 5/12–5/14 成田線維修取消 12 班</h3>
+    <div class="meta">JAPAN · JR East · 2026-04-20 ~ 05-14</div>
+    <p>日本氣象廳於 4/20 19:30 發布「Hokkaido–Sanriku Offshore Subsequent Earthquake Advisory」，提醒東日本鐵路系統留意後續強震風險；JR 東日本依此檢視沿線監測。同時公告成田線 5 月 12、13、14 日 09:10–15:00 將進行白天線路維修，預計取消 12 班佐原至銚子區間列車。</p>
+    <p class="source">Sources: <a href="https://www.jreast.co.jp/en/e/press/" target="_blank">JR East Press Releases</a></p>
+  </div>
+</section>
+
+<!-- ========== 03 ========== -->
+<section class="topic" id="t03">
+  <h2>03. 🔧 智慧維修 Smart Maintenance
+    <span class="en">Predictive analytics, sensors, and condition-based maintenance</span>
+  </h2>
+
+  <div class="news-card tech">
+    <h3>MDPI Sensors 期刊綜述 — AI 預測維護 (PdM) 可降低鐵路維修成本 15–35%</h3>
+    <div class="meta">RESEARCH · MDPI Sensors · April 2026</div>
+    <p>MDPI Sensors 期刊本週新增「AI-Enabled Predictive Maintenance for Railway Infrastructure」綜述，整理 CNN-LSTM 等混合模型在鐵路資產監測的應用。研究指出，運用感測資料、營運歷史與機器學習模型預測資產劣化，可使維修成本降低 15–35%，同時延長資產壽命、改善服務可靠度。實際感測架構結合車載 (轉向架加速度計、軸承溫度探頭、煞車感測)、軌旁 (車輪衝擊負載偵測、聲學陣列) 與基礎設施 (鋼軌應變計、轉轍器監測、接觸網張力感測) 三層。</p>
+    <p class="source">Sources: <a href="https://www.mdpi.com/1424-8220/26/3/906" target="_blank">MDPI Sensors – AI PdM Survey</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12899784/" target="_blank">PMC mirror</a></p>
+  </div>
+
+  <div class="news-card tech">
+    <h3>JARVIS 平台 — STRIDES Technologies 為新加坡 SMRT 整合 30 年維修資料</h3>
+    <div class="meta">SINGAPORE · SMRT · STRIDES Technologies · April 2026</div>
+    <p>新加坡 SMRT 旗下 STRIDES Technologies 推出 JARVIS 智慧維修平台，整合 30 年以上的營運、工程與故障模式資料，透過機器學習與生成式 AI 聊天介面協助維修團隊更快、更準確地診斷與主動干預。本週由 FutureIoT 報導為亞洲鐵路智慧維修的重要範例，已具備跨系統整合與自然語言查詢功能。</p>
+    <p class="source">Sources: <a href="https://futureiot.tech/jarvis-ai-platform-brings-predictive-rail-maintenance-to-life/" target="_blank">FutureIoT – JARVIS Platform</a></p>
+  </div>
+
+  <div class="news-card tech">
+    <h3>條件式監測技術回顧 — 數位孿生與 BIM 結合成 PdM 主流</h3>
+    <div class="meta">REVIEW · Tandfonline / MDPI Infrastructures · April 2026</div>
+    <p>本週兩篇學術綜述聚焦數位孿生 (Digital Twin) 與 BIM 在鐵路預測維護的整合應用：透過即時鏡射軌道、車輛、號誌系統的虛擬模型，結合多源感測資料進行劣化模擬與壽命預測，已開始在歐洲與北美主要營運商進行試點。產業共識認為 BIM-DT-AI 三者結合是下一階段 PdM 的主流架構。</p>
+    <p class="source">Sources: <a href="https://www.mdpi.com/2412-3811/11/3/87" target="_blank">MDPI Infrastructures – PdM with AI/BIM/DT</a> · <a href="https://www.tandfonline.com/doi/full/10.1080/15732479.2025.2596714" target="_blank">Tandfonline – Railway PdM Paradigm</a></p>
+  </div>
+</section>
+
+<!-- ========== 04 ========== -->
+<section class="topic" id="t04">
+  <h2>04. 🎫 票務與旅服 Ticketing & Passenger Services
+    <span class="en">Ticketing systems, fare strategy, and passenger service updates</span>
+  </h2>
+
+  <div class="news-card good">
+    <h3>印度 IRCTC 新規 5/1 生效 — 8 小時內取消零退款、強制 2FA</h3>
+    <div class="meta">INDIA · IRCTC · Indian Railways · 2026-05-01</div>
+    <p>印度鐵路自 5 月 1 日起實施一系列票務與退票新規：旅客若於發車前 8 小時內取消已確認車票將不獲任何退款 (原為 4 小時)；最高退款 (僅扣固定取消費) 須於發車前 72 小時前取消 (原為 48 小時)。線上訂票全面強制兩階段驗證 (2FA)，目標打擊黃牛囤票與提升數位安全。等待票 (WL) 與候補票 (RAC) 取消費維持每張 ₹20 + GST。</p>
+    <p class="source">Sources: <a href="https://hellorail.in/news/irctc-new-ticket-cancellation-refund-rules-may-2026/" target="_blank">HelloRail – IRCTC New Rules May 2026</a> · <a href="https://www.goodreturns.in/news/indian-railways-ticket-cancellation-rules-changed-from-april-2026-no-refund-if-cancelled-within-8hrs-1498351.html" target="_blank">Goodreturns – Refund Rules Updated</a></p>
+  </div>
+
+  <div class="news-card">
+    <h3>中國 12306 票務系統優化 — 候補購票、選座與動態配票</h3>
+    <div class="meta">CHINA · 12306 · 2026-04-29 ~ 05-06</div>
+    <p>因應五一連假運輸高峰，12306 平台優化候補購票、線上選座與依即時需求動態配票功能，並針對長者與學生族群提供額外協助通道。國鐵集團指出，2026 年五一票務數位化程度為歷年最高，其中候補購票成功率與選座覆蓋率較 2025 年同期顯著提升。</p>
+    <p class="source">Sources: <a href="https://www.chinadailyasia.com/hk/article/632014" target="_blank">China Daily Asia – Rail services for May Day</a></p>
+  </div>
+
+  <div class="news-card">
+    <h3>台灣高鐵母親節加開 30 班 — 5/8–5/11 連假運輸啟動</h3>
+    <div class="meta">TAIWAN · THSR · 2026-05-08 ~ 05-11</div>
+    <p>台灣高鐵公告母親節旅運期 (5/8–5/11) 加開 30 班次，南北各 15 班；5/9 早班 (8 點前發車) 提供早鳥折扣，並提供 8 班次大學生半價自由座以鼓勵返家。尖峰時段全車站列車的自由座車廂由 10–12 號擴增至 9–12 號。</p>
+    <p class="source">Sources: <a href="https://www.taipeitimes.com/News/taiwan/archives/2026/04/09/2003855295" target="_blank">Taipei Times – THSR Mother's Day</a></p>
+  </div>
+</section>
+
+<!-- ========== 05 ========== -->
+<section class="topic" id="t05">
+  <h2>05. 📱 智慧車上旅服 Smart On-board Services
+    <span class="en">Onboard Wi-Fi, entertainment, and passenger experience tech</span>
+  </h2>
+
+  <div class="news-card tech">
+    <h3>歐洲車載 Wi-Fi 速度差距懸殊 — 瑞典 64.6 Mbps vs 荷蘭 0.4 Mbps</h3>
+    <div class="meta">EUROPE · Ookla / Speedtest · April 2026</div>
+    <p>本週 Wireless Broadband Alliance 與多家媒體引述 Ookla / Speedtest 2025 量測結果，歐洲列車車載 Wi-Fi 平均下載速度差距巨大：表現最佳的瑞典約 64.6 Mbps，最差的荷蘭僅約 0.4 Mbps，顯示「鐵路寬頻」國家落差遠超公網。產業趨勢顯示 Google、Instagram、Facebook 已佔列車 Wi-Fi 用量大宗，旅客期待車內網路體驗向家用寬頻看齊。</p>
+    <p class="source">Sources: <a href="https://wballiance.com/how-passengers-are-using-on-train-wi-fi-in-2025/" target="_blank">WBA – On-train Wi-Fi 2025 Insights</a></p>
+  </div>
+
+  <div class="news-card tech">
+    <h3>LEO 衛星 + 5G 邊緣天線 — Brightline Florida 路線成業界範本</h3>
+    <div class="meta">USA · Brightline · McLaren Applied · 引述 April 2026</div>
+    <p>本週多家業者引述 Brightline 自 2025 年 4 月在 Miami–Orlando 路線部署的 LEO 衛星與 McLaren Applied 5G Edge Active Antenna 整合方案。透過智慧鏈路聚合，可在蜂巢覆蓋不穩定區段維持穩定的旅客體驗。Icomera 已成為 SpaceX Starlink 軌道應用授權經銷商，其 SureWAN 聚合協定使列車在衛星與蜂巢網路間無縫切換，被視為下一階段車載連線的主流架構。</p>
+    <p class="source">Sources: <a href="https://www.moment.tech/news/4-trends-shaping-the-rail-passenger-experience-in-2026" target="_blank">Moment – 4 Trends Rail PAX Experience</a> · <a href="https://www.icomera.com/solutions/passenger-wi-fi/" target="_blank">Icomera – Passenger Wi-Fi Solutions</a></p>
+  </div>
+</section>
+
+<!-- ========== 06 ========== -->
+<section class="topic" id="t06">
+  <h2>06. 🏛️ 智慧車站旅服 Smart Station Services
+    <span class="en">Smart station infrastructure, real-time information, and digital services</span>
+  </h2>
+
+  <div class="news-card good">
+    <h3>英國 Southeastern 全自動旅客資訊系統 — £260,000 升級 CIS</h3>
+    <div class="meta">UK · Southeastern · 2026-05-01</div>
+    <p>英國 Southeastern 完成英國首個全自動旅客資訊系統 (CIS) 升級，斥資 £260,000 重建後台，可即時、精準將班表異動推播至車站顯示器與自動廣播。此為英國 GBR (Great British Railways) 重組架構下的數位化先行案例，目標解決手動更新延遲與資訊不一致問題。</p>
+    <p class="source">Sources: <a href="https://raillynews.com/2026/05/automatic-information-system-in-uk-railways/" target="_blank">RaillyNews – Southeastern Auto Info System</a></p>
+  </div>
+
+  <div class="news-card tech">
+    <h3>中國高鐵寵物託運服務五一爆量 — 智慧寵物運輸艙升級</h3>
+    <div class="meta">CHINA · China Railway · 2026-04-30</div>
+    <p>因應五一假期需求暴增，中國高鐵新推出的寵物託運服務啟動全面流程優化，包括智慧寵物運輸艙的監控、溫控與通風系統升級。本週 People's Daily 報導，鐵路營運商已整合車站智慧化檢核流程，使旅客可同時辦理人車寵物票務作業。</p>
+    <p class="source">Sources: <a href="http://en.people.cn/n3/2026/0430/c90000-20451997.html" target="_blank">People's Daily – HSR Pet Consignment</a></p>
+  </div>
+
+  <div class="news-card">
+    <h3>數位鐵路市場規模 — 2026 年 910 億美元，2034 年將達 1,830 億美元</h3>
+    <div class="meta">RESEARCH · Fortune Business Insights · April 2026</div>
+    <p>Fortune Business Insights 本週發布報告，全球數位鐵路 (含智慧車站) 市場將自 2026 年 910.6 億美元成長至 2034 年的 1,831.2 億美元。推動力主要來自無接觸付費、智慧車站方案、AI 客服整合與旅客即時資訊系統部署。</p>
+    <p class="source">Sources: <a href="https://www.fortunebusinessinsights.com/digital-railway-market-106982" target="_blank">Fortune – Digital Railway Market</a></p>
+  </div>
+</section>
+
+<!-- ========== 07 ========== -->
+<section class="topic" id="t07">
+  <h2>07. 🤖 AI與科技應用 AI & Technology
+    <span class="en">AI applications, generative tools, and digital transformation</span>
+  </h2>
+
+  <div class="news-card tech">
+    <h3>SMRT × Oracle Autonomous AI Database — 30 年資料 + 生成式 AI 聊天介面</h3>
+    <div class="meta">SINGAPORE · SMRT · Oracle · 2026-04-14 (引述本週擴散)</div>
+    <p>SMRT 於 Oracle AI World Tour Singapore (4/14) 公布以 Oracle Cloud Infrastructure (OCI) Enterprise AI 與 Autonomous AI Database 為核心的智慧分析平台。系統整合超過 30 年的營運、工程與故障模式資料，維修團隊可透過 LLM + 向量搜尋驅動的生成式 AI 聊天介面進行查詢與診斷，大幅縮短資訊比對時間。本週多家亞洲營運商引述為案例參考。</p>
+    <p class="source">Sources: <a href="https://www.computerweekly.com/news/366641812/SMRT-taps-AI-and-analytics-to-predict-rail-faults-and-speed-up-maintenance" target="_blank">Computer Weekly – SMRT AI Analytics</a></p>
+  </div>
+
+  <div class="news-card tech">
+    <h3>中國 CR450 高鐵列車 2026 年京滬線投入運行 — 試驗速度 453 km/h 創世界紀錄</h3>
+    <div class="meta">CHINA · CRRC Qingdao Sifang · 2026 年內</div>
+    <p>本週多家媒體更新中國 CR450AF Fuxing 動車組進度：營運速度 400 km/h、設計極速 450 km/h，試驗中達 453 km/h 為輪軌列車世界紀錄。預計 2026 年內於京滬高鐵正式部署，靜止至 350 km/h 加速僅需 4 分 40 秒，較現役 Fuxing 快 100 秒以上；總重減輕約 10%、整體運行阻力降低 22%。</p>
+    <p class="source">Sources: <a href="https://en.wikipedia.org/wiki/China_Railway_CR450AF" target="_blank">CR450AF Wikipedia</a> · <a href="https://www.travelandtourworld.com/news/article/china-cr450-high-speed-train-to-enter-service-in-2026-promising-to-slash-travel-times-and-set-new-standards-for-speed/" target="_blank">CR450 Service Entry 2026</a></p>
+  </div>
+
+  <div class="news-card tech">
+    <h3>鐵路 AI 市場 — 2030 年估超過 60 億美元、北美最大區域</h3>
+    <div class="meta">RESEARCH · EIN Presswire · April 2026</div>
+    <p>本週 EIN Presswire 發布鐵路 AI 市場研究：2025–2030 年硬體市場將增長 10 億美元、軟體市場將增長 20 億美元，總市場規模 2030 年突破 60 億美元。北美為最大區域 (預估 30 億美元)；單一國家以美國最大 (10 億美元)。應用集中在缺陷偵測、影像辨識、運能最佳化與旅客服務 AI。</p>
+    <p class="source">Sources: <a href="https://www.einpresswire.com/article/903995970/railway-artificial-intelligence-ai-market-drivers-2026-2030-regional-outlook-and-sizing-analysis" target="_blank">EIN – Railway AI Market 2026-2030</a></p>
+  </div>
+</section>
+
+<!-- ========== 08 ========== -->
+<section class="topic" id="t08">
+  <h2>08. 🔒 資安強化 Cybersecurity
+    <span class="en">Cyber threats, security incidents, and infrastructure hardening</span>
+  </h2>
+
+  <div class="news-card alert">
+    <h3>「Black Signal」勒索軟體針對北美貨運鐵路 — 釣魚郵件鎖定員工</h3>
+    <div class="meta">NORTH AMERICA · Freight Rail · Industrial Cyber · 2026 年初啟動 (本週擴散報導)</div>
+    <p>2026 年初啟動的「Black Signal」勒索軟體攻擊活動，本週由多家資安媒體再度報導追蹤。攻擊鎖定北美貨運鐵路業者，以針對性釣魚郵件入侵員工帳號，再橫向擴散至營運網路。HALOCK 與 SecureWorld 指出，鐵路業者 2026 年 Q1 遭網攻通報數已較 2025 年同期增加，呼籲強化員工資安意識教育與隔離 OT/IT 網段。</p>
+    <p class="source">Sources: <a href="https://www.halock.com/top-cyber-threats-in-the-freight-rail-sector/" target="_blank">HALOCK – Freight Rail Cyber Threats</a> · <a href="https://www.secureworld.io/industry-news/railway-cyber-attacks" target="_blank">SecureWorld – Cyber Attacks +220%</a></p>
+  </div>
+
+  <div class="news-card alert">
+    <h3>美國貨運列車 EoT 模組關鍵漏洞 12 年未修 — 修補預計 2027 年才推出</h3>
+    <div class="meta">USA · AAR · Industrial Cyber · April 2026</div>
+    <p>Industrial Cyber 報導，美國貨運鐵路使用之 End-of-Train (EoT) / Head-of-Train (HoT) 通訊模組關鍵漏洞已被學界提出 12 年但未修補，可能讓攻擊者偽造煞車訊號。AAR 本週公告替代系統部署計畫，但業界最快 2027 年才能完成大規模換裝，引發 ISA 與 CISA 持續關切。</p>
+    <p class="source">Sources: <a href="https://industrialcyber.co/industrial-cyber-attacks/critical-cyber-flaw-linked-to-eot-module-ignored-in-us-rail-systems-for-12-years-fix-not-expected-until-2027/" target="_blank">Industrial Cyber – EoT Critical Flaw</a></p>
+  </div>
+</section>
+
+<!-- ========== 09 ========== -->
+<section class="topic" id="t09">
+  <h2>09. 💰 財務狀況 Financial Status
+    <span class="en">Financial results, market valuations, and investments</span>
+  </h2>
+
+  <div class="news-card fin">
+    <h3>JR 東日本 Q1 季報 — EPS $0.15、季營收 $53.8 億美元</h3>
+    <div class="meta">JAPAN · East Japan Railway (EJPRY) · 2026-05-02</div>
+    <p>JR 東日本 (East Japan Railway) 公布最新季財報：每股盈餘 $0.15 美元、季營收 $53.8 億美元。公司營運範圍涵蓋傳統線與東北、上越、北陸新幹線等多條新幹線，連接東京與東北、北陸等地。Daily Political 5/2 報導本季營收年增主要來自旅運恢復與物流業務擴張。</p>
+    <p class="source">Sources: <a href="https://www.dailypolitical.com/2026/05/02/east-japan-railway-otcmktsejpry-posts-quarterly-earnings-results.html" target="_blank">Daily Political – JR East Q1</a></p>
+  </div>
+
+  <div class="news-card fin">
+    <h3>JR 東海 Q1 季報 — EPS $0.31 超預期 $0.09、季營收 $30.8 億美元</h3>
+    <div class="meta">JAPAN · Central Japan Railway (CJPRY) · 2026 年 4 月底</div>
+    <p>JR 東海 (Central Japan Railway) Q1 EPS $0.31 美元，較市場共識 $0.22 高出 $0.09；季營收 $30.8 億美元，略低於分析師預期 $31 億。公司核心業務為東海道新幹線 (連接東京、名古屋、大阪)，並持續推進中央新幹線 (磁浮) 工程。</p>
+    <p class="source">Sources: <a href="https://www.tickerreport.com/banking-finance/13422263/central-japan-railway-otcmktscjpry-posts-quarterly-earnings-results-beats-expectations-by-0-09-eps.html" target="_blank">Ticker Report – JR Central Q1</a></p>
+  </div>
+
+  <div class="news-card fin">
+    <h3>台灣高鐵 (2633.TW) TTM 營收 $16.8 億美元 — 客流穩健</h3>
+    <div class="meta">TAIWAN · THSR (2633.TW) · 2026-01 統計基準</div>
+    <p>截至 2026 年 1 月，台灣高鐵 (2633.TW) 過去 12 個月 (TTM) 營收達 $16.8 億美元，反映 2025 年下半至 2026 初客運市場穩健成長。本週母親節加班與五一連假南北旅運活絡，預期將進一步支撐 Q2 營收。</p>
+    <p class="source">Sources: <a href="https://companiesmarketcap.com/taiwan-high-speed-rail/revenue/" target="_blank">CompaniesMarketCap – THSR Revenue</a></p>
+  </div>
+
+  <div class="news-card fin">
+    <h3>加州高鐵成本估列上修至 $2,310 億美元 — 4/29 董事會通過 2026 商業計畫</h3>
+    <div class="meta">USA · CHSRA · 2026-04-29</div>
+    <p>加州高鐵局於 4/29 通過 2026 年商業計畫，將總成本估列由 $1,260 億美元上調至 $2,310 億美元，並將初期營運段 (IOS Central Valley) 啟用日期推遲至 2032 年。聯邦 $40 億補助於 2025 年遭川普政府撤回，加州 12 月撤回對應訴訟；目前資金來源依賴州政府 cap-and-trade 計畫每年 $10 億 (至 2045 年) 與尋找私募投資人。</p>
+    <p class="source">Sources: <a href="https://www.foxla.com/news/california-high-speed-rail-cost-soars-231-billion" target="_blank">Fox LA – CA HSR $231B</a> · <a href="https://www.enr.com/articles/61055-trump-administration-pulls-4b-in-california-high-speed-rail-funding-but-state-has-a-new-plan" target="_blank">ENR – Federal Funding Pulled</a></p>
+  </div>
+</section>
+
+<!-- ========== 10 ========== -->
+<section class="topic" id="t10">
+  <h2>10. 🏗️ 工程進度 Engineering Progress
+    <span class="en">Construction milestones, new lines, and infrastructure delivery</span>
+  </h2>
+
+  <div class="news-card eng">
+    <h3>印度 MAHSR (Mumbai–Ahmedabad) — 高架橋 345 km、橋柱達 435 km</h3>
+    <div class="meta">INDIA · NHSRCL · 2026-04 月底</div>
+    <p>印度 NHSRCL 公布 4/5 累計高架橋完成 345 km、橋柱完成 435 km；4/19 累計橋柱另完成 300 km 路段；4/9 啟動首部 TBM 隧道鑽掘機組裝、預計 97 天內開挖。Valsad 附近首條鋼軌隧道 (350 m 長) 已開挖 67 m；接觸網支柱已安裝約 4,800 支、覆蓋 111 km；噪音障壁累計超過 49 萬片，覆蓋 245 km。第一通車段 Surat–Bilimora 50 km 預計 2027 年 8 月通車，全線預計 2029 年完工。</p>
+    <p class="source">Sources: <a href="https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor" target="_blank">Mumbai–Ahmedabad HSR Corridor</a> · <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2113558" target="_blank">PIB – MAHSR Update</a></p>
+  </div>
+
+  <div class="news-card eng">
+    <h3>泰中高鐵 Phase 1 整體進度 53.19% — 因 1月吊車事故仍處部分停工</h3>
+    <div class="meta">THAILAND · State Railway of Thailand · 2026-03-25 進度基準</div>
+    <p>據泰中高鐵公司公告，Bangkok–Nakhon Ratchasima Phase 1 (253 km) 累計實施進度截至 3/25 為 53.19%，預計 2027 年通車。但 2026 年 1 月 14 日工地吊車倒塌事故導致 32 人罹難 (擊中通過的客運列車)，相關契約遭責令停工調查中，Office of Attorney General 將決定是否解約。Phase 2 (Nakhon Ratchasima–Nong Khai 357 km) 已於 2025 年 2 月泰國內閣批准，預算約 3,410 億泰銖、預計 2031 年通車。</p>
+    <p class="source">Sources: <a href="https://en.wikipedia.org/wiki/Bangkok%E2%80%93Nong_Khai_high-speed_railway" target="_blank">Bangkok–Nong Khai HSR</a> · <a href="https://www.nationthailand.com/blogs/news/general/40064094" target="_blank">NationThailand – Project Risks Delay</a></p>
+  </div>
+
+  <div class="news-card eng">
+    <h3>加州高鐵 IOS — 80 mi (130 km) 連續高架/路基段完成、佔 IOS 67%</h3>
+    <div class="meta">USA · California HSR · 2026-04 月底</div>
+    <p>加州高鐵 Initial Operating Segment (IOS) 累計連續完成 80 mi (130 km) 路基/高架，佔目標長度 67%。本週工程進度公告含 Tulare 物料運輸 (4/20–5/8)、5/1 前圍籬與管線移設交通管制。Q2 預計授予軌道與系統主合約，目標年底前啟動鋪軌作業。</p>
+    <p class="source">Sources: <a href="https://buildhsr.com/" target="_blank">BuildHSR</a> · <a href="https://www.gov.ca.gov/2026/02/03/governor-newsom-announces-major-high-speed-rail-milestone-track-installation-to-begin/" target="_blank">CA Gov – HSR Track Milestone</a></p>
+  </div>
+
+  <div class="news-card eng">
+    <h3>UAE 杜拜–阿布達比高鐵 — 560 mi 路網首段預計 2026 年內通車</h3>
+    <div class="meta">UAE · Etihad Rail · 2026 年內</div>
+    <p>阿聯酋首條高鐵 560 mi (900 km) 路網首段杜拜–阿布達比段預計 2026 年內通車啟用，將成為阿聯酋高鐵首發路段。本週 Newsweek 與 CNN 將其列為「2026 年最值得期待的新列車」之一。</p>
+    <p class="source">Sources: <a href="https://www.cnn.com/travel/most-exciting-new-trains-for-2026" target="_blank">CNN – Most Exciting New Trains 2026</a></p>
+  </div>
+</section>
+
+<!-- ========== 11 ========== -->
+<section class="topic" id="t11">
+  <h2>11. 🌱 ESG永續發展 ESG & Sustainability
+    <span class="en">Sustainability initiatives, decarbonization, and green operations</span>
+  </h2>
+
+  <div class="quiet-box">
+    <div class="quiet-title">🔕 本週無重大動態 / No Major Updates This Week</div>
+    <p>本週 ESG 主題未有針對單一營運商或單一新政策的突出新聞。背景趨勢說明：鐵路雖佔全球客貨運活動量 8%，但僅佔交通部門排放 2%，是唯一在 2000–2018 期間排放下降的運輸方式 (-2%)。歐洲領先業者 (NS、Belgium 鐵路、SNCF 等) 持續朝 100% 再生能源目標推進，BNSF 設定 2030 年碳排減 30% 目標。</p>
+  </div>
+
+  <div class="news-card good">
+    <h3>UIC 永續架構 — 鐵路為唯一排放下降的運輸模式</h3>
+    <div class="meta">GLOBAL · UIC · McKinsey · 引述背景</div>
+    <p>UIC (國際鐵路聯盟) 與 McKinsey 持續更新的永續架構顯示，全球鐵路業 ESG 推進已從「能源轉型」擴展至「自然資本與生物多樣性」、「供應鏈勞權」與「在地社區共融」三大新議題。歐洲一家領先業者已宣示 2040 年碳中和目標，並全面對齊 TCFD 與 SBTi 框架；NS (荷蘭鐵路) 以 100% 風能電力營運，已是全球首家年度淨零的鐵路公司。</p>
+    <p class="source">Sources: <a href="https://uic.org/sustainability/" target="_blank">UIC – Sustainability</a> · <a href="https://www.mckinsey.com/industries/infrastructure/our-insights/good-better-best-railways-are-advancing-their-esg-agenda" target="_blank">McKinsey – Railways ESG Agenda</a></p>
+  </div>
+</section>
+
+<!-- ========== 12 SUMMARY ========== -->
+<section class="summary-section" id="summary">
+  <h2>📊 本週總結與展望 Summary & Outlook</h2>
+
+  <h3>本週六大焦點 / Top 6 Highlights</h3>
+  <ul>
+    <li><b>📈 中國五一單日載客創 2,480 萬人歷史新高</b>：12,000+ 班、加開 2,000+ 班次、12306 動態配票，五一連假 8 日累計鐵路發送 1.58 億人次。</li>
+    <li><b>🚨 印尼 Bekasi 通勤列車追撞</b>：4/27 西爪哇 Bekasi Timur 站，KRL 通勤列車遭 Argo Bromo Anggrek 追撞，16 死、90 傷，KAI 啟動獨立調查。</li>
+    <li><b>🎫 印度 IRCTC 5/1 新規生效</b>：8 小時內取消零退款、強制 2FA、72 小時內取消才能享最高退款，目標打擊黃牛與強化資安。</li>
+    <li><b>🏗️ 印度 MAHSR 進度推進</b>：4 月底高架橋達 345 km、橋柱達 435 km，首條鋼軌隧道開挖、首部 TBM 已組裝；首通車段 (Surat–Bilimora) 仍預定 2027 年 8 月通車。</li>
+    <li><b>💰 加州高鐵成本上修 $2,310 億</b>：4/29 董事會通過 2026 商業計畫，IOS 推遲至 2032 年；資金缺口需仰賴 cap-and-trade 與私募投資人。</li>
+    <li><b>🤖 SMRT × Oracle AI</b>：30 年資料 + 生成式 AI 聊天介面平台已成為亞洲鐵路智慧維修參考案例，與 STRIDES JARVIS 平台同為本週重點。</li>
+  </ul>
+
+  <h3>下週觀察重點 / Outlook for Next Week</h3>
+  <ul>
+    <li>中國五一連假後段客流回程峰值 (5/4–5/6) 與運輸總結數據披露。</li>
+    <li>台灣高鐵母親節加開 (5/8–5/11) 及實際座位填載率。</li>
+    <li>印度 IRCTC 新規上路後第一週運作回饋與用戶投訴情形。</li>
+    <li>美國加州高鐵 Q2 軌道與系統主合約決標時程。</li>
+    <li>泰國 Phase 1 高鐵停工調查的法律走向與工期重排。</li>
+    <li>JR 西日本與其他日系營運商 Q1 財報後續發布。</li>
+  </ul>
+
+  <h3>方法論說明 / Methodology Note</h3>
+  <p>本週報蒐集 2026/04/27–05/03 (W19) 期間的全球高鐵與亞洲傳統鐵路相關新聞，依 11 大主題分類整理。新聞量稀少之主題以「本週無重大動態」標示並補背景趨勢說明，未進行推測或填充。所有內容均附原始連結供讀者進一步查證。</p>
+</section>
+
+<div class="footer">
+  GLOBAL RAILWAY INTELLIGENCE • W19 · 2026-05-04 · MONDAY FINAL<br>
+  © 2026 Global Railway Weekly Intelligence Report
+</div>
+
+</div>
+</body>
+</html>
